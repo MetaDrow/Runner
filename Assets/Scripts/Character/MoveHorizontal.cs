@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MoveHorizontal : MonoBehaviour
 {
-    private float lineSpeed = 6;
+    [SerializeField] private float lineChangeSpeed = 6;
     [SerializeField] private int lineStep = 0;
     private int line = 0;
 
@@ -23,12 +23,15 @@ public class MoveHorizontal : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    void Update()
+    private void Update()
     {
-        CheckPosition();
+
         Move(ref line);
+    }
 
-
+    private void FixedUpdate() //  нет подергиваний 
+    {
+        CheckPosition(); 
     }
 
     void CheckPosition()
@@ -37,8 +40,8 @@ public class MoveHorizontal : MonoBehaviour
         if ((transform.position.x > targetPos.x && targetSpeed.x > 0) || (transform.position.x < targetPos.x && targetSpeed.x < 0))
         {
             targetSpeed = Vector3.zero;
-            _rb.velocity = targetSpeed;
-            _rb.position = targetPos;
+           // _rb.velocity = targetSpeed; 
+            //_rb.position = targetPos;
         }
     }
 
@@ -63,62 +66,53 @@ public class MoveHorizontal : MonoBehaviour
 
     private int MoveRight(ref int line)
     {
-        if (line == 0)
+        switch (line)
         {
-            targetSpeed = new Vector3(lineSpeed, 0, 0);
-            targetPos = new Vector3(targetPos.x + lineStep, targetPos.y, targetPos.z); // 0 y 0z ?
+            case 0:
+                {
+                    targetSpeed = new Vector3(lineChangeSpeed, targetPos.y, targetPos.z);
+                    targetPos = new Vector3(targetPos.x + lineStep, targetPos.y, targetPos.z); 
 
-            line++;
-            _animator.Play("StrafeRight");
-            return line;
+                    line++;
+                    _animator.Play("StrafeRight");
+                    return line;
+                }
+            case -1:
+                {
+                    targetSpeed = new Vector3(lineChangeSpeed, targetPos.y, targetPos.z);
+                    targetPos = new Vector3(targetPos.x + lineStep, targetPos.y, targetPos.z);
+
+                    line++;
+                    _animator.Play("StrafeRight");
+                    return line;
+                }
         }
-
-        if (line == -1)
-        {
-            targetSpeed = new Vector3(lineSpeed, 0, 0);
-            targetPos = new Vector3(targetPos.x + lineStep, targetPos.y, targetPos.z);
-
-            line++;
-            _animator.Play("StrafeRight");
-            return line;
-
-        }
-
-        if (line == 2)
-        {
-            line--;
-            return line;
-        }
-
         return line;
     }
 
     private int MoveLeft(ref int line)
     {
-
-
-        if (line == 0 || line == 1)
+        switch (line)
         {
-            targetSpeed = new Vector3(-lineSpeed, 0, 0);
-            targetPos = new Vector3(targetPos.x - lineStep, targetPos.y, targetPos.z);
+            case 0:
+                {
+                    targetSpeed = new Vector3(-lineChangeSpeed, targetPos.y, targetPos.z);
+                    targetPos = new Vector3(targetPos.x - lineStep, targetPos.y, targetPos.z);
 
-            line--;
-            _animator.Play("StrafeLeft");
-            return line;
-        }
+                    line--;
+                    _animator.Play("StrafeLeft");
+                    return line;
+                }
+            case 1:
+                {
+                    targetSpeed = new Vector3(-lineChangeSpeed, targetPos.y, targetPos.z);
+                    targetPos = new Vector3(targetPos.x - lineStep, targetPos.y, targetPos.z);
 
-
-        if (line == -2)
-        {
-            targetSpeed = new Vector3(-lineSpeed, 0, 0);
-            targetPos = new Vector3(targetPos.x - lineStep, targetPos.y, targetPos.z);
-
-            line++;
-            _animator.Play("StrafeLeft");
-            return line;
+                    line--;
+                    _animator.Play("StrafeLeft");
+                    return line;
+                }
         }
         return line;
-
     }
-
 }
