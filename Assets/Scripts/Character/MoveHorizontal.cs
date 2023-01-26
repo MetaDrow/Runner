@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
+
 
 public class MoveHorizontal : MonoBehaviour
 {
     [SerializeField] private float lineChangeSpeed = 6;
-    [SerializeField] private int lineStep = 0;
+    [SerializeField] private float lineStep = 0;
     private int line = 0;
 
     Vector3 targetPos;
@@ -25,23 +24,24 @@ public class MoveHorizontal : MonoBehaviour
 
     private void Update()
     {
-
         Move(ref line);
+
     }
 
-    private void FixedUpdate() //  нет подергиваний 
+    private void FixedUpdate()
     {
-        CheckPosition(); 
+        CheckPosition();
     }
+
 
     void CheckPosition()
     {
-        _rb.velocity = targetSpeed;
+
         if ((transform.position.x > targetPos.x && targetSpeed.x > 0) || (transform.position.x < targetPos.x && targetSpeed.x < 0))
         {
             targetSpeed = Vector3.zero;
-           // _rb.velocity = targetSpeed; 
-            //_rb.position = targetPos;
+            _rb.velocity = targetSpeed;
+            _rb.position = targetPos;
         }
     }
 
@@ -50,16 +50,12 @@ public class MoveHorizontal : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-
             return MoveRight(ref line);
-
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-
             return MoveLeft(ref line);
-
         }
         return line;
     }
@@ -70,22 +66,29 @@ public class MoveHorizontal : MonoBehaviour
         {
             case 0:
                 {
-                    targetSpeed = new Vector3(lineChangeSpeed, targetPos.y, targetPos.z);
-                    targetPos = new Vector3(targetPos.x + lineStep, targetPos.y, targetPos.z); 
-
+                    targetSpeed = new Vector3(lineChangeSpeed, 0, 0);
+                    targetPos = new Vector3(targetPos.x + lineStep, _rb.position.y, _rb.position.z); //0?
+                    _rb.velocity = targetSpeed;
                     line++;
+
+
                     _animator.Play("StrafeRight");
                     return line;
                 }
             case -1:
                 {
-                    targetSpeed = new Vector3(lineChangeSpeed, targetPos.y, targetPos.z);
-                    targetPos = new Vector3(targetPos.x + lineStep, targetPos.y, targetPos.z);
+                    targetSpeed = new Vector3(lineChangeSpeed, 0, 0);
+                    targetPos = new Vector3(targetPos.x + lineStep, _rb.position.y, _rb.position.z);
+                    _rb.velocity = targetSpeed;
 
                     line++;
+
+
                     _animator.Play("StrafeRight");
                     return line;
                 }
+
+
         }
         return line;
     }
@@ -96,23 +99,31 @@ public class MoveHorizontal : MonoBehaviour
         {
             case 0:
                 {
-                    targetSpeed = new Vector3(-lineChangeSpeed, targetPos.y, targetPos.z);
-                    targetPos = new Vector3(targetPos.x - lineStep, targetPos.y, targetPos.z);
+                    targetSpeed = new Vector3(-lineChangeSpeed, 0, 0);
+                    targetPos = new Vector3(targetPos.x - lineStep, _rb.position.y, _rb.position.z);
+                    _rb.velocity = targetSpeed;
 
                     line--;
+
+
                     _animator.Play("StrafeLeft");
                     return line;
                 }
             case 1:
                 {
-                    targetSpeed = new Vector3(-lineChangeSpeed, targetPos.y, targetPos.z);
-                    targetPos = new Vector3(targetPos.x - lineStep, targetPos.y, targetPos.z);
+                    targetSpeed = new Vector3(-lineChangeSpeed, 0, 0);
+                    targetPos = new Vector3(targetPos.x - lineStep, _rb.position.y, _rb.position.z);
+                    _rb.velocity = targetSpeed;
 
                     line--;
+
+
                     _animator.Play("StrafeLeft");
                     return line;
                 }
         }
         return line;
     }
+
+
 }

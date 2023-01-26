@@ -51,7 +51,7 @@ public class PlatformGenerate : MonoBehaviour
     {
         foreach (Platform platform in PlatformPrefabs)
         {
-            int platformBackPosition = -20;
+            int platformBackPosition = -30;
             platform.transform.position = new Vector3(0, 0, platformBackPosition);
         }
     }

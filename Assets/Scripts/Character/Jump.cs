@@ -2,26 +2,34 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    [SerializeField]private float jumpForce = 2f;
-    private bool isGrounded;
+    [SerializeField] private float jumpForce = 2f;
+    public float gravityScale = 0;
     private Rigidbody _rb;
+    Animator _anim;
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _anim = GetComponent<Animator>();
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void Update()
     {
-        isGrounded = true;
+        PlayerJump();
     }
-    private void FixedUpdate()
+
+    void PlayerJump()
     {
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.Space))
         {
+            _anim.Play("RunningJump");
+            _rb.velocity = Vector3.up * jumpForce;
+        }
 
-            _rb.velocity = (Vector3.up * jumpForce);
-            isGrounded = false;
+
+        if (_rb.position.y > 1) //out of if 
+        {
+            Vector3 gravity = new Vector3(0, -gravityScale, 0);
+            _rb.velocity = gravity;
         }
     }
-
 }
