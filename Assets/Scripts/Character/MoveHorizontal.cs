@@ -26,6 +26,8 @@ public class MoveHorizontal : MonoBehaviour
     {
         Move(ref line);
 
+
+
     }
 
     private void FixedUpdate()
@@ -41,8 +43,9 @@ public class MoveHorizontal : MonoBehaviour
         {
             targetSpeed = Vector3.zero;
             _rb.velocity = targetSpeed;
-            _rb.position = targetPos;
+           // _rb.position = targetPos; // если убрать = плавное смещение во время прыжка 
         }
+
     }
 
     private int Move(ref int line)
@@ -58,6 +61,8 @@ public class MoveHorizontal : MonoBehaviour
             return MoveLeft(ref line);
         }
         return line;
+
+
     }
 
     private int MoveRight(ref int line)

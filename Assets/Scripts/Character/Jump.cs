@@ -6,6 +6,7 @@ public class Jump : MonoBehaviour
     public float gravityScale = 0;
     private Rigidbody _rb;
     Animator _anim;
+    private bool _isGround;
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -19,17 +20,25 @@ public class Jump : MonoBehaviour
 
     void PlayerJump()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             _anim.Play("RunningJump");
             _rb.velocity = Vector3.up * jumpForce;
         }
 
 
-        if (_rb.position.y > 1) //out of if 
+        if (_rb.position.y > 1 ) //out of if 
         {
             Vector3 gravity = new Vector3(0, -gravityScale, 0);
             _rb.velocity = gravity;
+
+           // _anim.Play("Fall");
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            _anim.Play("Roll");
         }
     }
 }

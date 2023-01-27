@@ -14,11 +14,14 @@ public class PlatformGenerate : MonoBehaviour
     [SerializeField] private float playerPlatromDistance = 45;
 
     private List<Platform> PlatformSpawned = new List<Platform>();
+
+    public Rigidbody _rb; //
    
     void Start()
     {
         PlatformSpawned.Add(FirstPlatform);
         //platformSpawned.Add(PlatformPrefabs[0]);
+        _rb= GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
