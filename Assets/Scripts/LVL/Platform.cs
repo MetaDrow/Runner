@@ -6,7 +6,6 @@ public class Platform : MonoBehaviour
 {
     [SerializeField] internal Transform Begin;
     [SerializeField] internal Transform End;
-
     [SerializeField] private float speed;
 
 

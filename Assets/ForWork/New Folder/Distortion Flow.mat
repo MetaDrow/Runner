@@ -88,12 +88,12 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 0.34
+    - _Speed: 0.1
     - _SrcBlend: 1
-    - _Tiling: 3.07
-    - _UJump: 0.118
+    - _Tiling: 11.92
+    - _UJump: -0.016
     - _UVSec: 0
-    - _VJump: -0.109
+    - _VJump: 0.14
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
