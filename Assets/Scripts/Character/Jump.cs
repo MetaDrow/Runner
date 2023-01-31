@@ -20,10 +20,11 @@ public class Jump : MonoBehaviour
 
     void PlayerJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && _isGround)
         {
             _anim.Play("RunningJump");
             _rb.velocity = Vector3.up * jumpForce;
+            _isGround= false;
         }
 
 
@@ -40,5 +41,10 @@ public class Jump : MonoBehaviour
         {
             _anim.Play("Roll");
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _isGround = true;
     }
 }
