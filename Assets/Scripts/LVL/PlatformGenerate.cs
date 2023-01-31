@@ -1,32 +1,31 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlatformGenerate : MonoBehaviour
 {
-    [SerializeField] private Transform Character; 
+    [SerializeField] private Transform Character;
     [SerializeField] private Platform[] PlatformPrefabs;
     [SerializeField] private Platform FirstPlatform;
-    [SerializeField] private float shearDistance = 5f;
     [SerializeField] private int platformCount = 8;
     [SerializeField] private float playerPlatromDistance = 45;
 
     private List<Platform> PlatformSpawned = new List<Platform>();
 
-    public Rigidbody _rb; //
-   
+    public Rigidbody _rb; 
+
     void Start()
     {
         PlatformSpawned.Add(FirstPlatform);
-        //platformSpawned.Add(PlatformPrefabs[0]);
-        _rb= GetComponent<Rigidbody>();
-    }
+        Spawned();
 
+        //PlatformSpawned.Add(PlatformPrefabs[0]);
+        _rb = GetComponent<Rigidbody>();
+    }
+                            
     void FixedUpdate()
     {
-        if (Character.localPosition.z > PlatformSpawned[PlatformSpawned.Count - 1].End.transform.position.z - playerPlatromDistance) 
+
+        if (Character.localPosition.z > PlatformSpawned[PlatformSpawned.Count - 1].End.transform.position.z - playerPlatromDistance)
         {
             Spawned();
         }
@@ -35,28 +34,19 @@ public class PlatformGenerate : MonoBehaviour
     private void Spawned()
     {
         Platform newPlatform = Instantiate(PlatformPrefabs[Random.Range(0, PlatformPrefabs.Length)]);
+        var previousEndPos = new Vector3(0, 0, PlatformSpawned[PlatformSpawned.Count - 1].End.position.z);
+        var endPos = newPlatform.End.position;
 
-        Vector3 shearPlatformDistance = new Vector3(0, 0, shearDistance);
-        //  newPlatform.transform.position = platformSpawned[platformSpawned.Count -1].End.position; 
-        newPlatform.transform.position = PlatformSpawned[PlatformSpawned.Count - 1].End.position + shearPlatformDistance ;
+        newPlatform.transform.position = previousEndPos + endPos;
 
         PlatformSpawned.Add(newPlatform);
 
-        if (PlatformSpawned.Count >= platformCount) 
+        if (PlatformSpawned.Count >= platformCount)
         {
             Destroy(PlatformSpawned[1].gameObject);
-            PlatformSpawned.RemoveAt(1);
-            PlatformPrefabsBackPosition();
+            PlatformSpawned.RemoveAt(0);
         }
     }
 
-    private void PlatformPrefabsBackPosition()
-    {
-        foreach (Platform platform in PlatformPrefabs)
-        {
-            int platformBackPosition = -30;
-            platform.transform.position = new Vector3(0, 0, platformBackPosition);
-        }
-    }
+
 }
-
