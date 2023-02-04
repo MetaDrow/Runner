@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.03
@@ -241,6 +241,9 @@ MonoBehaviour:
   - {fileID: 3196408669536853446, guid: fbf067e658ab0fb4b84960e694c1e822, type: 3}
   - {fileID: -4224634414132957212, guid: 2a07f8af5fbaa364fbf72df4f9b3c6ab, type: 3}
   - {fileID: 5463150439475578472, guid: 6f145790520f9e94aa7fd775e8c6d1b0, type: 3}
+  - {fileID: -4912390212624946352, guid: 5a8ffb1a9d8cb5d4cb1f3221485fb18f, type: 3}
+  - {fileID: -3874181308093279216, guid: 4ddb5ed61e425c94da1d28108c1f8861, type: 3}
+  - {fileID: -7777990732372119294, guid: 93c36eaab98d5994ead091f005e04a53, type: 3}
   FirstPlatform: {fileID: 3886044288020478376, guid: 2d003c2b5923abe4faf4ca7c3704dfc6, type: 3}
   platformCount: 15
   playerPlatromDistance: 100
@@ -399,7 +402,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 611638e45df8b4cf2ac11b29129001eb, type: 2}
+  - {fileID: 2100000, guid: 38d89ffa3eac9454fbad1c037ea03e9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -465,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 75b8da93efa1d494d9d6818f9a864ccc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.29
+      value: 14.79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 75b8da93efa1d494d9d6818f9a864ccc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -827,7 +830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.25881997, y: 0.00007444219, z: -0.0002778209, w: 0.9659256}
-  m_LocalPosition: {x: -0.0014824867, y: 4.19, z: 1.32}
+  m_LocalPosition: {x: -0.0014824867, y: 4.19, z: 11.41}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -900,7 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc6838944d1d53488279be51ebb3426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineChangeSpeed: 6
+  lineChangeSpeed: 14
   lineStep: 1.75
 --- !u!114 &1230788883
 MonoBehaviour:
