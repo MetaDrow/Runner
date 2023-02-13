@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3886044288020478376}
   - component: {fileID: 3985002997974412628}
   m_Layer: 0
-  m_Name: platform
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 5394225863618794268}
   End: {fileID: 5394225864019288582}
-  speed: 5
+  speed: 7
 --- !u!64 &3985002997974412628
 MeshCollider:
   m_ObjectHideFlags: 0
