@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 6010563708204709746}
   End: {fileID: 6010563708068316776}
-  speed: 5
+  speed: 7
 --- !u!64 &3877647220134268859
 MeshCollider:
   m_ObjectHideFlags: 0

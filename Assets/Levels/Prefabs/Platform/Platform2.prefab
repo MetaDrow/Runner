@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 2926710675115105256}
   End: {fileID: 2189041848105716425}
-  speed: 5
+  speed: 7
 --- !u!1 &619989857694292088
 GameObject:
   m_ObjectHideFlags: 0
