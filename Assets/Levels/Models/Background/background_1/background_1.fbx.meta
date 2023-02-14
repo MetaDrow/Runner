@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: background_1
-    second: {fileID: 2100000, guid: 9a3bc8badf245b04484ca0a3ba4d7784, type: 2}
+    second: {fileID: 2100000, guid: be198b9ad394ffd43ac2f2e580bd5783, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
