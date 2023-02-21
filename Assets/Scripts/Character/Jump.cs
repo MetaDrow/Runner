@@ -13,7 +13,7 @@ public class Jump : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         PlayerJump();
     }
@@ -27,7 +27,7 @@ public class Jump : MonoBehaviour
             _isGround= false;
         }
 
-
+        /*
         if (_rb.position.y > 1 ) //out of if 
         {
             Vector3 gravity = new Vector3(0, -gravityScale, 0);
@@ -36,7 +36,7 @@ public class Jump : MonoBehaviour
            // _anim.Play("Fall");
 
         }
-
+        */
         if (Input.GetKeyDown(KeyCode.S))
         {
             _anim.Play("Roll");
