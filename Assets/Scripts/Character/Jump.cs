@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    [SerializeField] private float jumpForce = 2f;
-    public float gravityScale = 0;
+    [SerializeField] private float _jumpForce = 2f;
     private Rigidbody _rb;
-    Animator _anim;
+    private Animator _anim;
     private bool _isGround;
     void Start()
     {
@@ -23,18 +22,17 @@ public class Jump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _isGround)
         {
             _anim.Play("RunningJump");
-            _rb.velocity = Vector3.up * jumpForce;
+            _rb.velocity = Vector3.up * _jumpForce;
             _isGround= false;
         }
 
-        
+        /*
         if (_rb.position.y > 1 ) //out of if 
         {
-
             _anim.Play("Fall");
-
         }
-        
+        */
+
         if (Input.GetKeyDown(KeyCode.S))
         {
             _anim.Play("Roll");
