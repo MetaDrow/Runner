@@ -1,5 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-431645635997608792
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfbdbb87d3286943a057f7791b43141, type: 3}
+  m_Name: ChannelMixer
+  m_EditorClassIdentifier: 
+  active: 1
+  redOutRedIn:
+    m_OverrideState: 1
+    m_Value: 120
+  redOutGreenIn:
+    m_OverrideState: 1
+    m_Value: -40
+  redOutBlueIn:
+    m_OverrideState: 1
+    m_Value: 17
+  greenOutRedIn:
+    m_OverrideState: 0
+    m_Value: 0
+  greenOutGreenIn:
+    m_OverrideState: 0
+    m_Value: 100
+  greenOutBlueIn:
+    m_OverrideState: 0
+    m_Value: 0
+  blueOutRedIn:
+    m_OverrideState: 0
+    m_Value: 0
+  blueOutGreenIn:
+    m_OverrideState: 0
+    m_Value: 0
+  blueOutBlueIn:
+    m_OverrideState: 0
+    m_Value: 100
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19,6 +59,7 @@ MonoBehaviour:
   - {fileID: 3024514315470986006}
   - {fileID: 2846541694606331176}
   - {fileID: 753789778091356397}
+  - {fileID: -431645635997608792}
 --- !u!114 &753789778091356397
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -34,10 +75,10 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: -5
+    m_Value: 8
   tint:
     m_OverrideState: 1
-    m_Value: -20.9
+    m_Value: -44
 --- !u!114 &881252605605779776
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -53,10 +94,10 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 9
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.346
   response:
     m_OverrideState: 1
     m_Value: 1
@@ -78,19 +119,19 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: -1.07
+    m_Value: -1.21
   contrast:
     m_OverrideState: 1
-    m_Value: -23
+    m_Value: 7
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 17
+    m_Value: -23
 --- !u!114 &3024514315470986006
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -106,13 +147,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.6551082, z: 0.33447683, w: 0.008688105}
+    m_Value: {x: 0.96236193, y: 0.72459006, z: 1, w: -0.20896608}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 0.6500087, y: 0.87288123, z: 1, w: 0.18245019}
+    m_Value: {x: 1, y: 0.9495951, z: 0.85130787, w: 0.25392982}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 0.37730712, y: 1, z: 0.9577985, w: 0.094078034}
+    m_Value: {x: 0.99649775, y: 1, z: 0.9864437, w: -0.051024724}
   shadowsStart:
     m_OverrideState: 1
     m_Value: 0
@@ -140,25 +181,25 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.95
+    m_Value: 1.2
   intensity:
     m_OverrideState: 1
-    m_Value: 0.91
+    m_Value: 3.59
   scatter:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.394
   clamp:
-    m_OverrideState: 0
-    m_Value: 65469.45
+    m_OverrideState: 1
+    m_Value: 69
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.19215685, g: 1, b: 0.5231428, a: 1}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 1
   skipIterations:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 6
   dirtTexture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -181,13 +222,13 @@ MonoBehaviour:
   active: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.14618191, g: 0.3598215, b: 0.4245283, a: 1}
+    m_Value: {r: 0.9622642, g: 0.45843717, b: 0.5755609, a: 1}
   center:
     m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.208
+    m_Value: 0.479
   smoothness:
     m_OverrideState: 0
     m_Value: 0.7
