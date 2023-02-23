@@ -1,21 +1,17 @@
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    [SerializeField] public Transform player;
-   public Vector3 offset;
+    [SerializeField] public Transform _player;
+    [SerializeField] private Vector3 _offset;
 
     void Start()
     {
-        offset = transform.position - player.position;
+        _offset = transform.position - _player.position;
     }
 
     void Update()
     {
-
-        transform.position = player.position + offset;
+        transform.position = _player.position + _offset;
     }
 }
