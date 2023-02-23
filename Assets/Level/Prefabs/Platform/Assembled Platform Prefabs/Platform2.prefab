@@ -640,8 +640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 5747720761525181510}
   End: {fileID: 6709944090274959312}
-  speed: 10
   CoinPrefab: {fileID: 405738633326556252}
+  _speed: 0
 --- !u!136 &4643642472836229991
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1270,8 +1270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 5524573975650071267}
   End: {fileID: 3589725028615804247}
-  speed: 10
   CoinPrefab: {fileID: 674123596510883484}
+  _speed: 0
 --- !u!136 &5982343544312919253
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1517,8 +1517,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 6827555203652456474}
   End: {fileID: 8159902773086814635}
-  speed: 10
   CoinPrefab: {fileID: 844835893040497035}
+  _speed: 0
 --- !u!136 &4412256230443799856
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1667,8 +1667,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 9008036764748237472}
   End: {fileID: 9139111220200595211}
-  speed: 10
   CoinPrefab: {fileID: 949087303086483764}
+  _speed: 0
 --- !u!136 &2723592248987230038
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1998,8 +1998,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 3783844333208318365}
   End: {fileID: 7571335820670681142}
-  speed: 10
   CoinPrefab: {fileID: 1085910886347435750}
+  _speed: 0
 --- !u!136 &2764533714823743051
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2117,8 +2117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8819148018473066460}
   End: {fileID: 7851139903270366168}
-  speed: 10
   CoinPrefab: {fileID: 1118402143306688737}
+  _speed: 0
 --- !u!136 &4769003407716882889
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2236,8 +2236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 2920814520626560768}
   End: {fileID: 1385002060584746705}
-  speed: 10
   CoinPrefab: {fileID: 1161477367631157566}
+  _speed: 0
 --- !u!136 &5610477923581244111
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2324,8 +2324,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 3183893158557451133}
   End: {fileID: 2848719233096402539}
-  speed: 10
   CoinPrefab: {fileID: 1176866058649137189}
+  _speed: 0
 --- !u!136 &4520421583686893752
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2931,8 +2931,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 1574821907494697637}
   End: {fileID: 6706024667929092274}
-  speed: 10
   CoinPrefab: {fileID: 1426588862347165846}
+  _speed: 0
 --- !u!136 &7110374874816992411
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3168,8 +3168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8349458908327516482}
   End: {fileID: 6628859845516914708}
-  speed: 10
   CoinPrefab: {fileID: 1466987690631617629}
+  _speed: 0
 --- !u!136 &6194294884681779073
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3547,7 +3547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749541938671771383}
   m_LocalRotation: {x: 0.49999875, y: 0.49999842, z: 0.500003, w: -0.49999988}
-  m_LocalPosition: {x: -0, y: -0.12, z: 1.61}
+  m_LocalPosition: {x: -0, y: -0.38, z: 1.61}
   m_LocalScale: {x: 100.00001, y: 99.99999, z: 99.99999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3983,8 +3983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 3492478277140201669}
   End: {fileID: 1060391259989614272}
-  speed: 10
   CoinPrefab: {fileID: 1992945425037521936}
+  _speed: 0
 --- !u!136 &4122060355908249776
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4480,8 +4480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 6004088691862373384}
   End: {fileID: 2904118974869017623}
-  speed: 10
   CoinPrefab: {fileID: 2199867627000430147}
+  _speed: 0
 --- !u!136 &3661933410949295350
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5096,8 +5096,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8005412825558817229}
   End: {fileID: 4105929981299316730}
-  speed: 10
   CoinPrefab: {fileID: 2553496974054641134}
+  _speed: 0
 --- !u!136 &5190134230300080227
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5215,8 +5215,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8958090870798897811}
   End: {fileID: 7854456311997940383}
-  speed: 10
   CoinPrefab: {fileID: 2568686834014857392}
+  _speed: 0
 --- !u!136 &8152372164001391746
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5428,8 +5428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 3258138712148694775}
   End: {fileID: 4402160661784052087}
-  speed: 10
   CoinPrefab: {fileID: 2715828996415728701}
+  _speed: 0
 --- !u!136 &4159066013980420292
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5696,8 +5696,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 2138526888868224663}
   End: {fileID: 1428851364843815029}
-  speed: 10
   CoinPrefab: {fileID: 2851149803359690438}
+  _speed: 0
 --- !u!136 &5286587330765095050
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5847,8 +5847,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8919341403663417750}
   End: {fileID: 8615826973521488366}
-  speed: 10
   CoinPrefab: {fileID: 2953745537076159532}
+  _speed: 0
 --- !u!136 &393671877028179074
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6755,8 +6755,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 2753495971816972347}
   End: {fileID: 8712509730555819310}
-  speed: 10
   CoinPrefab: {fileID: 3586708270374520804}
+  _speed: 0
 --- !u!136 &1506974689939481074
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6843,8 +6843,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 3971195450396042517}
   End: {fileID: 8075423370968322463}
-  speed: 10
   CoinPrefab: {fileID: 3630960189933004288}
+  _speed: 0
 --- !u!136 &3942701956338925364
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7167,8 +7167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 886374516707733303}
   End: {fileID: 3852642064394579717}
-  speed: 10
   CoinPrefab: {fileID: 3843040009326031395}
+  _speed: 0
 --- !u!136 &8687136929410366923
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7317,8 +7317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 1830769991422601063}
   End: {fileID: 5006505432170029757}
-  speed: 10
   CoinPrefab: {fileID: 3904786000987147964}
+  _speed: 0
 --- !u!136 &737565229419968430
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7654,8 +7654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 7917361724735474319}
   End: {fileID: 2921605378638181040}
-  speed: 10
   CoinPrefab: {fileID: 4124560863518240488}
+  _speed: 0
 --- !u!136 &8077303493198856262
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7774,8 +7774,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 4245242571766163648}
   End: {fileID: 3160776215702504043}
-  speed: 10
   CoinPrefab: {fileID: 4170439596117957328}
+  _speed: 0
 --- !u!136 &5335684185319920405
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7956,8 +7956,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 5881926366453039767}
   End: {fileID: 8373468326835476927}
-  speed: 10
   CoinPrefab: {fileID: 4280729242752818233}
+  _speed: 0
 --- !u!136 &157314253227602930
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8174,8 +8174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 5253847034423771234}
   End: {fileID: 3582914127972566447}
-  speed: 10
   CoinPrefab: {fileID: 4399133468535456641}
+  _speed: 0
 --- !u!136 &8466716258881181903
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8510,8 +8510,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 7057375330119507600}
   End: {fileID: 5277613468456917653}
-  speed: 10
   CoinPrefab: {fileID: 4650461267491376951}
+  _speed: 0
 --- !u!136 &1612307944232049323
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8715,8 +8715,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8946000782731482862}
   End: {fileID: 2717265461595274292}
-  speed: 10
   CoinPrefab: {fileID: 4791892929854311031}
+  _speed: 0
 --- !u!136 &2093126322307624941
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9438,8 +9438,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 7470363428899937885}
   End: {fileID: 8870710997431088431}
-  speed: 10
   CoinPrefab: {fileID: 5290642062772045561}
+  _speed: 0
 --- !u!136 &5450800720004954744
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10018,8 +10018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 6053083828745164351}
   End: {fileID: 6770840858063395788}
-  speed: 10
   CoinPrefab: {fileID: 5774635596509070806}
+  _speed: 0
 --- !u!136 &7934265607566120844
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10846,8 +10846,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 4557232161826247606}
   End: {fileID: 1894603210680497481}
-  speed: 10
   CoinPrefab: {fileID: 6191334418149096232}
+  _speed: 0
 --- !u!136 &4019221758228881268
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11832,8 +11832,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 5607774901485331290}
   End: {fileID: 5374762359367286616}
-  speed: 10
   CoinPrefab: {fileID: 6807119827815777130}
+  _speed: 0
 --- !u!136 &439595320499722311
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12678,8 +12678,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 4090503629966910096}
   End: {fileID: 6470950090299212177}
-  speed: 10
   CoinPrefab: {fileID: 7202653092917778595}
+  _speed: 0
 --- !u!136 &3877906033267754304
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12766,8 +12766,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 1340766369008612839}
   End: {fileID: 826206459600054689}
-  speed: 10
   CoinPrefab: {fileID: 7207817039934426295}
+  _speed: 0
 --- !u!136 &7981741448758771541
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12948,8 +12948,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8141479124051219191}
   End: {fileID: 8785248420378041924}
-  speed: 10
   CoinPrefab: {fileID: 7286844462860280810}
+  _speed: 0
 --- !u!136 &7473734937725649094
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13104,8 +13104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 3307035113602020932}
   End: {fileID: 5650469968473428000}
-  speed: 10
   CoinPrefab: {fileID: 7314310326319691261}
+  _speed: 0
 --- !u!136 &8276905026503458316
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13523,8 +13523,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 5090740708913830799}
   End: {fileID: 5777284238463996238}
-  speed: 10
   CoinPrefab: {fileID: 7472716767998889652}
+  _speed: 0
 --- !u!136 &8764904976104239518
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13642,8 +13642,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 7495519452256941718}
   End: {fileID: 2994719180270503963}
-  speed: 10
   CoinPrefab: {fileID: 7513442581064309793}
+  _speed: 0
 --- !u!136 &1929772043683389351
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14171,8 +14171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 5012141055391404724}
   End: {fileID: 6999469250433493848}
-  speed: 10
   CoinPrefab: {fileID: 7936049084999835193}
+  _speed: 0
 --- !u!136 &1492054152854388544
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14290,8 +14290,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 3427470167997203983}
   End: {fileID: 2976603900283644714}
-  speed: 10
   CoinPrefab: {fileID: 8001696727431017065}
+  _speed: 0
 --- !u!136 &5593338059025365126
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14716,8 +14716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8285262839183358627}
   End: {fileID: 7350417688118018608}
-  speed: 10
   CoinPrefab: {fileID: 8141840945954052166}
+  _speed: 0
 --- !u!136 &891550081869215271
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14866,8 +14866,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8451054183550651558}
   End: {fileID: 743626913806361068}
-  speed: 10
   CoinPrefab: {fileID: 8197835996811816755}
+  _speed: 0
 --- !u!136 &978285991767095937
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15426,8 +15426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 1514403325276739631}
   End: {fileID: 681969272361516369}
-  speed: 10
   CoinPrefab: {fileID: 8508623323508869543}
+  _speed: 0
 --- !u!136 &238049166193728858
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15546,8 +15546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 9163690898236247370}
   End: {fileID: 5060814893252302213}
-  speed: 10
   CoinPrefab: {fileID: 8521994374992529635}
+  _speed: 0
 --- !u!136 &548121335623561015
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15720,8 +15720,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 5406415223903145095}
   End: {fileID: 7132734106478907853}
-  speed: 10
   CoinPrefab: {fileID: 8555200567172760821}
+  _speed: 0
 --- !u!136 &8961152629669281303
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15839,8 +15839,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 457056347744280912}
   End: {fileID: 6566338976349556063}
-  speed: 10
   CoinPrefab: {fileID: 8584373762543757218}
+  _speed: 0
 --- !u!136 &6318976071340662713
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16169,8 +16169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 8380127259291374930}
   End: {fileID: 287718150421737674}
-  speed: 10
   CoinPrefab: {fileID: 8741227740002471659}
+  _speed: 0
 --- !u!136 &7293154784490231150
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16921,8 +16921,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 7753201441731887125}
   End: {fileID: 9057658036944526645}
-  speed: 10
   CoinPrefab: {fileID: 9054470682623392071}
+  _speed: 0
 --- !u!136 &8113983156941941896
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17219,8 +17219,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 6050675594916562685}
   End: {fileID: 4210693880551709976}
-  speed: 10
   CoinPrefab: {fileID: 9150012838097671529}
+  _speed: 0
 --- !u!136 &1756490092090092605
 CapsuleCollider:
   m_ObjectHideFlags: 0
