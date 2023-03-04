@@ -9,17 +9,18 @@ public class PlatformGenerate : MonoBehaviour
     [SerializeField] private int platformCount = 8;
     [SerializeField] private float playerPlatromDistance = 45;
 
-    internal List<Platform> PlatformSpawned = new List<Platform>();
+    [SerializeField]internal List<Platform> PlatformSpawned = new List<Platform>();
 
     public Rigidbody _rb; 
 
     void Start()
     {
         PlatformSpawned.Add(FirstPlatform);
-        Spawned();
+
+        //Spawned();
 
         //PlatformSpawned.Add(PlatformPrefabs[0]);
-        _rb = GetComponent<Rigidbody>();
+
     }
                             
     void FixedUpdate()

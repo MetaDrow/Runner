@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Coin
+  - NotLose
+  - Faster
   layers:
   - Default
   - TransparentFX

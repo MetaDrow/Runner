@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Coin : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Coin : MonoBehaviour
 
     [SerializeField] private float _speed;
 
+
     void Update()
     {
         Move();
@@ -17,4 +19,6 @@ public class Coin : MonoBehaviour
     {
         transform.position -= new Vector3(0, 0, _speed * Time.deltaTime);
     }
+
+
 }

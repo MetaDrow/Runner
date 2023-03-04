@@ -45,6 +45,7 @@ public class ObstacleGenerate : MonoBehaviour
             {
 
                 case Pos.Left:
+
                     if (obstacleSpawn[obstacleSpawn.Count - 1].transform.position != _generator.PlatformSpawned[_generator.PlatformSpawned.Count - 1].spawnLeft.position)
                     {
                         newObstacle.transform.position = _generator.PlatformSpawned[_generator.PlatformSpawned.Count - 1].spawnLeft.position;
@@ -53,6 +54,7 @@ public class ObstacleGenerate : MonoBehaviour
                     break;
 
                 case Pos.Right:
+
                     if(obstacleSpawn[obstacleSpawn.Count - 1].transform.position != _generator.PlatformSpawned[_generator.PlatformSpawned.Count - 1].spawnRight.position)
                     {
                         newObstacle.transform.position = _generator.PlatformSpawned[_generator.PlatformSpawned.Count - 1].spawnRight.position;
@@ -61,6 +63,7 @@ public class ObstacleGenerate : MonoBehaviour
                     break;
 
                 case Pos.Center:
+
                     if (obstacleSpawn[obstacleSpawn.Count - 1].transform.position != _generator.PlatformSpawned[_generator.PlatformSpawned.Count - 1].spawnCenter.position)
                     {
                         newObstacle.transform.position = _generator.PlatformSpawned[_generator.PlatformSpawned.Count - 1].spawnCenter.position;
