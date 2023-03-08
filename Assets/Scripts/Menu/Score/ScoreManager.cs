@@ -17,6 +17,10 @@ public class ScoreManager : MonoBehaviour
     public  float score;
     internal int hightScore;
 
+    ///////////////////////////////////////
+    [SerializeField] internal TextMeshProUGUI coinText;
+    [SerializeField] internal static int coin;
+
     private void Awake()
     {
         //PlayerPrefs.DeleteAll();
@@ -36,7 +40,7 @@ public class ScoreManager : MonoBehaviour
         ScoreText.text = score.ToString();
         HightScoreText.text= hightScore.ToString();
 
-
+        CoinCount();
         /*
         if(PlayerPrefs.GetInt("score")<= hightScore)
         {
@@ -71,4 +75,8 @@ public class ScoreManager : MonoBehaviour
         score = 0;
     }
 
+    void CoinCount()
+    {
+        coinText.text = coin.ToString();
+    }
 }
