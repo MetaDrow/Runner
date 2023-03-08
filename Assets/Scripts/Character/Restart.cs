@@ -9,13 +9,13 @@ internal class Restart : MonoBehaviour
     public AbstractCharacterMove _character;
     public PlatformFactory _platform;
     public BasePrefab _prefab;
-    // Это заглушка для тестов
+
 
 
     void Update()
     {
         RestartGame();
-        Ray();
+
     }
 
     private void RestartGame()
@@ -33,11 +33,13 @@ internal class Restart : MonoBehaviour
             // Invoke("DeathPanel", 1f);
             // _DeathMenu._fader.animator.SetTrigger("FaderOut");
             _character._isPlay = false;
+
             _character._animator.Play("Death");
             //_character._rb.transform.position = new Vector3(0, _character._rb.position.y, _character._rb.position.z);
 
            // var platformPosition = _platformGenerate.PlatformSpawned.position;
             PauseGame();
+            _DeathMenu._audio.Pause();
             StartCoroutine(DeathPanel());
 
 
@@ -47,23 +49,17 @@ internal class Restart : MonoBehaviour
 
         if (CompareTag("Player") && other.CompareTag("Faster"))
         {
-            _prefab._speed += 20f;
+            _character._speed += 0.15f;
         }
     }
-    void Ray()
-    {
-        Ray ray = new Ray();
-        ray.origin = transform.position;
-        ray.direction = Vector3.down;
-        Debug.DrawRay(transform.position, Vector3.down);
 
-    }
     IEnumerator DeathPanel()
     {
 
         yield return new WaitForSecondsRealtime(2f);
         this._character.transform.position = _platform.PrefabSpawned[2].transform.position;
         this._character._line = 0;
+        this._character._targetPos = this._character._rb.transform.position;
         _DeathMenu.deathPanel.SetActive(true);
         _character._isPlay = true;
     }

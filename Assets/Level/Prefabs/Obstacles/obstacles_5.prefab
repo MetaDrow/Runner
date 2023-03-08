@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2187041367842275988}
   - component: {fileID: 1021362031425004597}
   - component: {fileID: -4689719836532059468}
+  - component: {fileID: -3269706521608946569}
   - component: {fileID: 5344812114576806144}
   - component: {fileID: 6273801069802136517}
   m_Layer: 0
@@ -29,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4837867856180557245}
   m_LocalRotation: {x: -0.5000008, y: 0.49999925, z: 0.49999928, w: 0.5000007}
-  m_LocalPosition: {x: -0.20166, y: 1.3127, z: 0.0157}
-  m_LocalScale: {x: 28.231464, y: 28.231464, z: 60.169067}
+  m_LocalPosition: {x: 0.4634, y: 1.3457, z: 0.0157}
+  m_LocalScale: {x: 11.19477, y: 21.983618, z: 40.880272}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -93,13 +94,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4837867856180557245}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b83de9e9ce2c8894d9ba97acca8f66e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _obstaclePrefab: {fileID: 4837867856180557245}
   _speed: 10
+--- !u!114 &-3269706521608946569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4837867856180557245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fc66e859fc14445a849547a1e97f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &5344812114576806144
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ public class NewMove : MonoBehaviour
     private void Update()
     {
         Move();
+        MoveForward();
     }
 
     private void FixedUpdate()
@@ -31,6 +32,12 @@ public class NewMove : MonoBehaviour
 
         CheckPosition();
     }
+
+    public void MoveForward()
+    {
+        _rb.transform.position += new Vector3(0, 0, 5 * Time.deltaTime);
+    }
+
 
     void CheckPosition()
     {

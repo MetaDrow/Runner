@@ -12,7 +12,7 @@ public class DeathMenu : MonoBehaviour
     public GameObject deathPanel;
     public  CoinCount coin;
     [SerializeField] internal Fader _fader;
-
+    public AudioSource _audio;
 
     private void Awake()
     {
@@ -44,7 +44,9 @@ public class DeathMenu : MonoBehaviour
 
     public void Restart()
     {
+        _audio.Stop();
         ResumeGame();
+
         CoinCount.coin = 0;
         SceneManager.LoadScene("LVL");
     }
@@ -55,6 +57,7 @@ public class DeathMenu : MonoBehaviour
         {
             deathPanel.SetActive(false);
             ResumeGame();
+            _audio.Play();
             CoinCount.coin -= 10;
         }
 

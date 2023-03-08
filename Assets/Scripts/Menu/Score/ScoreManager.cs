@@ -11,9 +11,10 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] internal static ScoreManager instance;
     [SerializeField] internal TextMeshProUGUI ScoreText;
     [SerializeField] internal TextMeshProUGUI HightScoreText;
+    [SerializeField] internal AbstractCharacterMove _character;
 
     private float time;
-    public  int score;
+    public  float score;
     internal int hightScore;
 
     private void Awake()
@@ -48,12 +49,12 @@ public class ScoreManager : MonoBehaviour
 
     void AddScore()
     {
-        time -= Time.deltaTime;
-        if (time <= 0)
-        {
-            score += 1;
-            AddHightScore();
-        }
+         score = (int)_character.transform.position.z;
+        score++;
+        AddHightScore();
+        
+
+
     }
 
     void AddHightScore()

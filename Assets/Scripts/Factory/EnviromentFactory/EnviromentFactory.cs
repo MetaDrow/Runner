@@ -6,12 +6,12 @@ public class EnviromentFactory :BaseFactory<EnviromentPrefab>
 {
     void Start()
     {
-
-        PrefabSpawned.Add(FirstPrefab);
+        PrefabSpawned.Add(_firstPrefab[0]);
+        //PrefabSpawned.Add(FirstPrefab);
         FirstPlatform();
         Spawned();
 
-        //PlatformSpawned.Add(PlatformPrefabs[0]);
+
 
     }
 
