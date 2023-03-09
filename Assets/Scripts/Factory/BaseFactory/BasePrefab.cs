@@ -11,7 +11,7 @@ public abstract class BasePrefab : MonoBehaviour, IMovePrefab
 
     void Start() 
     {
-        _speed = 10;
+        _speed = 0;
     }
     public void Move()
     {

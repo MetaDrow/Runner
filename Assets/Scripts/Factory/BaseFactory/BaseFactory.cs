@@ -6,13 +6,13 @@ using UnityEngine;
 
 public abstract class BaseFactory<T> : MonoBehaviour
 {
-    [SerializeField] protected T FirstPrefab;
+    [SerializeField] protected T[] _firstPrefab;
     [SerializeField] protected Transform Character;
     [SerializeField] protected T[] BasePrefabs;
     [SerializeField] protected int prefabCount = 8;
     [SerializeField] protected float playerPrefabDistance = 45;
-    internal List<T> PrefabSpawned = new List<T>();
-
+    [SerializeField] internal List<T> PrefabSpawned = new List<T>();
+   // [SerializeField] protected List<T> FirstPrefabs = new List<T>();
 
     public abstract T Spawned();
 

@@ -11,10 +11,15 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] internal static ScoreManager instance;
     [SerializeField] internal TextMeshProUGUI ScoreText;
     [SerializeField] internal TextMeshProUGUI HightScoreText;
+    [SerializeField] internal AbstractCharacterMove _character;
 
     private float time;
-    public  int score;
+    public  float score;
     internal int hightScore;
+
+    ///////////////////////////////////////
+    [SerializeField] internal TextMeshProUGUI coinText;
+    [SerializeField] internal static int coin;
 
     private void Awake()
     {
@@ -35,7 +40,7 @@ public class ScoreManager : MonoBehaviour
         ScoreText.text = score.ToString();
         HightScoreText.text= hightScore.ToString();
 
-
+        CoinCount();
         /*
         if(PlayerPrefs.GetInt("score")<= hightScore)
         {
@@ -48,12 +53,12 @@ public class ScoreManager : MonoBehaviour
 
     void AddScore()
     {
-        time -= Time.deltaTime;
-        if (time <= 0)
-        {
-            score += 1;
-            AddHightScore();
-        }
+         score = (int)_character.transform.position.z;
+        score++;
+        AddHightScore();
+        
+
+
     }
 
     void AddHightScore()
@@ -70,4 +75,8 @@ public class ScoreManager : MonoBehaviour
         score = 0;
     }
 
+    void CoinCount()
+    {
+        coinText.text = coin.ToString();
+    }
 }

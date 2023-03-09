@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class DeathMenu : MonoBehaviour
 {
     [SerializeField] internal TextMeshProUGUI ScoreText;
-    //public RectTransform deathPanel;
-    public GameObject deathPanel;
-    public  CoinCount coin;
-    [SerializeField] internal Fader _fader;
 
+    public GameObject deathPanel;
+    public ScoreManager coin;
+
+    public AudioSource _audio;
 
     private void Awake()
     {
@@ -38,24 +38,27 @@ public class DeathMenu : MonoBehaviour
     public void MainMenu()
     {
         ResumeGame();
-        CoinCount.coin = 0;
+        ScoreManager.coin = 0;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void Restart()
     {
+        _audio.Stop();
         ResumeGame();
-        CoinCount.coin = 0;
+
+        ScoreManager.coin = 0;
         SceneManager.LoadScene("LVL");
     }
 
     public void Resume()
     {
-        if(CoinCount.coin >=10)
+        if(ScoreManager.coin >=10)
         {
             deathPanel.SetActive(false);
             ResumeGame();
-            CoinCount.coin -= 10;
+            _audio.Play();
+            ScoreManager.coin -= 10;
         }
 
     }

@@ -8,24 +8,46 @@ internal class CharacterMove : AbstractCharacterMove
     {
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
-        _targetPos = transform.position;
+        _targetPos = _rb.transform.position;
         _isPlay = true;
+        // _isJump = false;
+        _speed = 10f;
+        _isStrafe = false;
+
+
     }
 
     private void Update()
     {
+
         if (_isPlay)
         {
+
             Move(ref _line);
-            Jump();
+
+
+
         }
 
     }
 
     private void FixedUpdate()
     {
-        CheckPosition();
-        FallJump();
+
+        if (_isPlay)
+        {
+            MoveForward();
+
+            FallJump();
+            CheckPosition();
+
+            if (_isStrafe == false)
+            {
+                Jump();
+            }
+
+        }
+
     }
 
 }
