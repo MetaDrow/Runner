@@ -26,9 +26,9 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
 
     private bool _isGround;
 
-   // internal bool _isJump;
+    // internal bool _isJump;
 
-
+    internal bool _isStrafe;
 
     internal void CheckPosition()
     {
@@ -38,15 +38,16 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
             _targetSpeed = Vector3.zero;
             _rb.velocity = _targetSpeed;
             //_rb.transform.position = _targetSpeed;
-           _rb.position = _targetPos; // если убрать = плавное смещение во время прыжка 
-
+            _rb.position = _targetPos; // если убрать = плавное смещение во время прыжка 
+            _isStrafe = false;
         }
 
 
     }
     public void MoveForward()
     {
-      _rb.transform.position += new Vector3(0, 0, _speed * Time.fixedDeltaTime);
+
+        _rb.transform.position += new Vector3(0, 0, _speed * Time.fixedDeltaTime);
     }
 
     public void Move(ref int line)
@@ -54,12 +55,16 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.D)) //&& _isJump == false) ///&& _rb.transform.position.x < -_lineStep)
         {
+
             MoveRight(ref line);
+
         }
 
         if (Input.GetKeyDown(KeyCode.A)) //&& _isJump == false)// && _rb.transform.position.x > _lineStep)
         {
+
             MoveLeft(ref line);
+
         }
 
 
@@ -81,6 +86,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
                     if (_rb.position.y < 0.1)
                     {
                         _animator.Play("StrafeRight");
+                        _isStrafe = true;
                     }
 
 
@@ -99,8 +105,8 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
                     if (_rb.position.y < 0.1)
                     {
                         _animator.Play("StrafeRight");
+                        _isStrafe = true;
                     }
-
                     break;
 
                 }
@@ -124,9 +130,8 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
                     if (_rb.position.y < 0.1)
                     {
                         _animator.Play("StrafeLeft");
+                        _isStrafe = true;
                     }
-
-
 
                     break;
                 }
@@ -142,6 +147,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
                     if (_rb.position.y < 0.1)
                     {
                         _animator.Play("StrafeLeft");
+                        _isStrafe = true;
                     }
 
 
@@ -159,12 +165,12 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.Space) && _isGround)
         {
-           
+
             _animator.Play("RunningJump");
             _rb.velocity = Vector3.up * _jumpForce;
             // _rb.velocity = new Vector3(0, 1, 0) * _jumpForce;
             _isGround = false;
-          //  _isJump = true;
+            //  _isJump = true;
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -181,7 +187,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
         }
 
 
-        if ((_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.A)) || (_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.D)) ) //out of if 
+        if ((_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.A)) || (_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.D))) //out of if 
         {
             _animator.Play("Fall");
         }
@@ -191,6 +197,6 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     private void OnCollisionEnter(Collision collision)
     {
         _isGround = true;
-       // _isJump = false;
+        // _isJump = false;
     }
 }

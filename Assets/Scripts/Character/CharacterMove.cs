@@ -10,15 +10,19 @@ internal class CharacterMove : AbstractCharacterMove
         _animator = GetComponent<Animator>();
         _targetPos = _rb.transform.position;
         _isPlay = true;
-       // _isJump = false;
+        // _isJump = false;
         _speed = 10f;
+        _isStrafe = false;
+
 
     }
 
     private void Update()
     {
+
         if (_isPlay)
         {
+
             Move(ref _line);
 
 
@@ -29,12 +33,19 @@ internal class CharacterMove : AbstractCharacterMove
 
     private void FixedUpdate()
     {
+
         if (_isPlay)
         {
             MoveForward();
-            Jump();
+
             FallJump();
             CheckPosition();
+
+            if (_isStrafe == false)
+            {
+                Jump();
+            }
+
         }
 
     }
