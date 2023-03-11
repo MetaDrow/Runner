@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 589797414249041823}
   - component: {fileID: -6701379942698079868}
+  - component: {fileID: 8750991851108851735}
   m_Layer: 0
   m_Name: Obstacle3
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6399341548458105784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.419, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40,13 +41,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6399341548458105784}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b83de9e9ce2c8894d9ba97acca8f66e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _obstaclePrefab: {fileID: 6399341548458105784}
   _speed: 10
+--- !u!114 &8750991851108851735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6399341548458105784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fc66e859fc14445a849547a1e97f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9019357635067724439
 GameObject:
   m_ObjectHideFlags: 0

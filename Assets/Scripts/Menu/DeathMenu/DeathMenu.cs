@@ -10,7 +10,7 @@ public class DeathMenu : MonoBehaviour
     [SerializeField] internal TextMeshProUGUI ScoreText;
 
     public GameObject deathPanel;
-    public ScoreManager coin;
+   // public ScoreManager coin;
 
     public AudioSource _audio;
 
@@ -49,11 +49,12 @@ public class DeathMenu : MonoBehaviour
 
         ScoreManager.coin = 0;
         SceneManager.LoadScene("LVL");
+        ScoreManager.instance._gameUI.SetActive(true);
     }
 
     public void Resume()
     {
-        if(ScoreManager.coin >=10)
+        if(ScoreManager.coin >=100)
         {
             deathPanel.SetActive(false);
             ResumeGame();
@@ -63,16 +64,4 @@ public class DeathMenu : MonoBehaviour
 
     }
 
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if (CompareTag("Player") && other.CompareTag("Finish"))
-        {
-            PauseGame();
-            deathPanel.SetActive(true);
-
-
-        }
-    }
-    */
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 
 interface IMove 
 {
-    [SerializeField] float _speed { set; get; }
+     float _speed { set; get; }
 
 
-    void MoveForward();
+    void MoveForward(float _speed);
 
-    void MoveRight(ref int line);
+    void MoveRight(ref int _line);
 
 
-    void MoveLeft( ref int line);
+    void MoveLeft( ref int _line);
 
 }

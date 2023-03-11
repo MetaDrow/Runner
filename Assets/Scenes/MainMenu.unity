@@ -770,7 +770,6 @@ GameObject:
   - component: {fileID: 1079956071}
   - component: {fileID: 1079956073}
   - component: {fileID: 1079956072}
-  - component: {fileID: 1079956075}
   - component: {fileID: 1079956074}
   m_Layer: 5
   m_Name: Start
@@ -916,18 +915,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1079956075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079956070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b204c3c60533274bab8719feadc3d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1264589110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1059,7 @@ MonoBehaviour:
   HightScoreText: {fileID: 1872333416}
   _character: {fileID: 0}
   score: 0
+  coinText: {fileID: 0}
 --- !u!4 &1537787126
 Transform:
   m_ObjectHideFlags: 0

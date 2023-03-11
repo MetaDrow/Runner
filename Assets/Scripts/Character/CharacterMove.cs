@@ -4,6 +4,7 @@ using UnityEngine;
 
 internal class CharacterMove : AbstractCharacterMove
 {
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -23,8 +24,8 @@ internal class CharacterMove : AbstractCharacterMove
         if (_isPlay)
         {
 
-            Move(ref _line);
 
+            MoveInput(ref _line);
 
 
         }
@@ -36,8 +37,8 @@ internal class CharacterMove : AbstractCharacterMove
 
         if (_isPlay)
         {
-            MoveForward();
 
+            MoveForward(_speed);
             FallJump();
             CheckPosition();
 

@@ -21,6 +21,9 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] internal TextMeshProUGUI coinText;
     [SerializeField] internal static int coin;
 
+    public GameObject _gameUI;
+
+
     private void Awake()
     {
         //PlayerPrefs.DeleteAll();

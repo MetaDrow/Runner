@@ -10,16 +10,6 @@ internal class SceneLoadManager : MonoBehaviour
     public PlatformFactory _platform;
     public DeathMenu _DeathMenu;
 
-    IEnumerator DeathPanel()
-    {
-
-        yield return new WaitForSecondsRealtime(2f);
-        this._character.transform.position = _platform.PrefabSpawned[2].transform.position;
-        this._character._line = 0;
-        this._character._targetPos = this._character._rb.transform.position;
-        _DeathMenu.deathPanel.SetActive(true);
-        _character._isPlay = true;
-    }
 
     internal void Trigger()
     {
@@ -33,6 +23,21 @@ internal class SceneLoadManager : MonoBehaviour
         StartCoroutine(DeathPanel());
 
     }
+
+    IEnumerator DeathPanel()
+    {
+
+        yield return new WaitForSecondsRealtime(2f);
+        this._character.transform.position = _platform.PrefabSpawned[2].transform.position;
+        this._character._line = 0;
+        this._character._targetPos = this._character._rb.transform.position;
+        ScoreManager.instance._gameUI.SetActive(false);
+
+        _DeathMenu.deathPanel.SetActive(true);
+        _character._isPlay = true;
+    }
+
+
 
     void PauseGame()
     {
