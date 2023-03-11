@@ -61,8 +61,10 @@ public class DeathMenu : MonoBehaviour
 
             deathPanel.SetActive(false);
             ScoreManager.instance._gameUI.SetActive(true);
-
-            StartCoroutine(ResumeGamePause());
+            ResumeGame();
+            _audio.Play();
+            ScoreManager.coin -= 1;
+            //StartCoroutine(ResumeGamePause());
 
         }
 
