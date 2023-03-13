@@ -48,8 +48,8 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     }
     public void MoveForward(float _speed)
     {
-
-      _rb.transform.position += new Vector3(0, 0, _speed * Time.deltaTime);
+        _animator.SetBool("Run", true);
+        _rb.transform.position += new Vector3(0, 0, _speed * Time.deltaTime);
 
     }
 

@@ -37,13 +37,14 @@ public class DeathMenu : MonoBehaviour
         CoinText.text = ScoreManager.coin.ToString();
     }
 
+    /*
     public void MainMenu()
     {
         ResumeGame();
         ScoreManager.coin = 0;
         SceneManager.LoadScene("MainMenu");
     }
-
+    */
     public void Restart()
     {
         _audio.Stop();
@@ -53,23 +54,23 @@ public class DeathMenu : MonoBehaviour
         SceneManager.LoadScene("LVL");
         ScoreManager.instance._gameUI.SetActive(true);
     }
-
-    public void Resume()
+    /*
+public void Resume()
+{
+    if(ScoreManager.coin >=1)
     {
-        if(ScoreManager.coin >=1)
-        {
 
-            deathPanel.SetActive(false);
-            ScoreManager.instance._gameUI.SetActive(true);
-            ResumeGame();
-            _audio.Play();
-            ScoreManager.coin -= 1;
-            //StartCoroutine(ResumeGamePause());
-
-        }
+        deathPanel.SetActive(false);
+        ScoreManager.instance._gameUI.SetActive(true);
+        ResumeGame();
+        _audio.Play();
+        ScoreManager.coin -= 1;
+        //StartCoroutine(ResumeGamePause());
 
     }
 
+}
+        */
     IEnumerator ResumeGamePause()
     {
         yield return new WaitForSecondsRealtime(5f);
