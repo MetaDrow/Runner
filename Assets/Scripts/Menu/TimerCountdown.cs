@@ -12,15 +12,30 @@ public class TimerCountdown : MonoBehaviour
     [SerializeField] public  GameObject _timer;
     void Start()
     {
-        _timerText.text = _delay.ToString();
-        _timer.SetActive(false);
+
+        //_timer.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        _delay -= (int)Time.unscaledTime;
-        _timerText.text = _delay.ToString();
+
+        StartCoroutine(Timer());
+    }
+    IEnumerator Timer()
+    {
+        
+        while (_delay> 0)
+        {
+            _delay--;
+            _timerText.text= _delay.ToString();
+            yield return new WaitForSecondsRealtime(1);
+
+        }
+    
+
+
+        yield return null;
     }
 
 

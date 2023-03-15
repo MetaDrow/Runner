@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] internal TextMeshProUGUI _hightScoreText;
 
     [SerializeField] internal Fader _fader;
+    [SerializeField] internal Animator _animator;
 
     private void Update()
     {
@@ -16,6 +17,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Play()
     {
+        _animator.Play("RunningMenu");
        _fader.FadeToNextLevel();
         // _fader.OnFadeComplete();
         // SceneManager.LoadScene("LVL");

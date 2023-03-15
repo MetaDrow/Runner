@@ -4,33 +4,28 @@ using UnityEngine.SceneManagement;
 public class Fader : MonoBehaviour
 {
 
-    public Animator animator;
+    public Animator _animator;
 
     private int levelToLoad;
 
 
-    void Update()
-    {
-        
-
-           // FadeToNextLevel();
-    
-    }
-
     public void FadeToNextLevel()
     {
-        FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+         FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 
     public void FadeToLevel(int levelIndex)
     {
         levelToLoad = levelIndex;
-        animator.SetTrigger("FaderOut");
-    }
+        _animator.SetTrigger("FaderOut");
 
-    public void OnFadeComplete()
+    }
+    
+    public void OnFadeComplete() //this method use animator events
     {
         SceneManager.LoadScene(levelToLoad);
     }
+    
 }
 

@@ -56,14 +56,14 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     protected void MoveInput(ref int line)
     {
 
-        if (Input.GetKeyDown(KeyCode.D)) 
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) 
         {
 
             MoveRight(ref line);
 
         }
 
-        if (Input.GetKeyDown(KeyCode.A)) //&& _isJump == false)// && _rb.transform.position.x > _lineStep)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) //&& _isJump == false)// && _rb.transform.position.x > _lineStep)
         {
 
             MoveLeft(ref line);
@@ -155,7 +155,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     public void Jump()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && _isGround)
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) && _isGround)
         {
 
             _animator.Play("RunningJump");
@@ -165,7 +165,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
             //  _isJump = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             _rb.velocity = new Vector3(0, -1, 0) * _jumpForce;
             _animator.Play("Roll");
@@ -179,7 +179,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
         }
 
 
-        if ((_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.A)) || (_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.D))) //out of if 
+        if ((_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.LeftArrow) ||  Input.GetKeyDown(KeyCode.A)) || (_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))) //out of if 
         {
             _animator.Play("Fall");
         }
