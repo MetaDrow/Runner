@@ -2299,7 +2299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1106888442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,7 +2392,6 @@ MonoBehaviour:
   BasePrefabs:
   - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
   - {fileID: 9204305306953937699, guid: 318105cfebc4c00438a9cb8b7f748d64, type: 3}
-  - {fileID: 1740127601171683913, guid: 8d43e71c3df67d64b9e3fec4dbcde1fe, type: 3}
   - {fileID: 1740127601171683913, guid: 8d43e71c3df67d64b9e3fec4dbcde1fe, type: 3}
   prefabCount: 12
   playerPrefabDistance: 500
@@ -3265,6 +3264,9 @@ MonoBehaviour:
   BasePrefabs:
   - {fileID: 416124416046598104, guid: 4f15e5baa50f1684f9c55cceab00dfc3, type: 3}
   - {fileID: 3940807530295589293, guid: 2547442527639104f85909dd4db02b80, type: 3}
+  - {fileID: 1206062418525649438, guid: 86a6ed120db96b64ab825a5e0906f2bb, type: 3}
+  - {fileID: 8239507711380671358, guid: 89d2389f747d2d742becdfa90d4c0e94, type: 3}
+  - {fileID: 1764755996674494262, guid: 80bac8db8f529bc45bc1c6558500c812, type: 3}
   prefabCount: 11
   playerPrefabDistance: 120
   PrefabSpawned: []

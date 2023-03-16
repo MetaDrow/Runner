@@ -149,10 +149,6 @@ MonoBehaviour:
   SpawnOne: {fileID: 5646594553341067503}
   SpawnTwo: {fileID: 4578371603623204034}
   SpawnThree: {fileID: 3843985817914944048}
-  _spawnPoint:
-  - {fileID: 5646594553341067503}
-  - {fileID: 4578371603623204034}
-  - {fileID: 3843985817914944048}
 --- !u!1 &6658807999807006975
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +160,7 @@ GameObject:
   - component: {fileID: 4270292922771736338}
   - component: {fileID: 25700769726774224}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: FasterCollider
   m_TagString: Faster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,8 +192,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.240385, y: 3.3408017, z: 1}
-  m_Center: {x: -0.030176431, y: 1.1704009, z: 0}
+  m_Size: {x: 2.240385, y: 3.3408017, z: 0.6838439}
+  m_Center: {x: -0.030176431, y: 1.1704009, z: -0.1580781}
 --- !u!1 &8013144653749559720
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +327,6 @@ MonoBehaviour:
   SpawnOne: {fileID: 0}
   SpawnTwo: {fileID: 0}
   SpawnThree: {fileID: 0}
-  _spawnPoint: []
 --- !u!64 &1891671246954340205
 MeshCollider:
   m_ObjectHideFlags: 0
