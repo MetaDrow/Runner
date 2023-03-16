@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.009
@@ -2388,10 +2388,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _firstPrefab:
   - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
-  - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
   Character: {fileID: 6919996581300334270}
   BasePrefabs:
   - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
+  - {fileID: 9204305306953937699, guid: 318105cfebc4c00438a9cb8b7f748d64, type: 3}
+  - {fileID: 1740127601171683913, guid: 8d43e71c3df67d64b9e3fec4dbcde1fe, type: 3}
+  - {fileID: 1740127601171683913, guid: 8d43e71c3df67d64b9e3fec4dbcde1fe, type: 3}
   prefabCount: 12
   playerPrefabDistance: 500
   PrefabSpawned: []
@@ -3262,6 +3264,7 @@ MonoBehaviour:
   Character: {fileID: 6919996581300334270}
   BasePrefabs:
   - {fileID: 416124416046598104, guid: 4f15e5baa50f1684f9c55cceab00dfc3, type: 3}
+  - {fileID: 3940807530295589293, guid: 2547442527639104f85909dd4db02b80, type: 3}
   prefabCount: 11
   playerPrefabDistance: 120
   PrefabSpawned: []
@@ -4416,7 +4419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &2104725306087429955
 GameObject:
   m_ObjectHideFlags: 0
