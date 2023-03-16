@@ -6,6 +6,7 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
 {
     [SerializeField] internal PlatformFactory _platformPrefab;
     //[SerializeField] internal PlatformPrefab _platformPrefasb;
+    [SerializeField] internal List<Transform> _spawnPoints;
     enum Pos { SpawnOne =1, SpawnTwo = 2, SpawnThree = 3 };
     void Start()
     {
