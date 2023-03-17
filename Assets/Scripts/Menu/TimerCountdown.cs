@@ -4,39 +4,44 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using static System.Net.Mime.MediaTypeNames;
 
 public class TimerCountdown : MonoBehaviour
 {
     [SerializeField] internal TextMeshProUGUI _timerText;
-    [SerializeField] private int _delay = 3;
-    [SerializeField] public  GameObject _timer;
+    [SerializeField] internal GameObject _timer;
+    private readonly int _timerValue= 5;
+
     void Start()
     {
 
-        //_timer.SetActive(false);
+         _timer.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartCorutine()
     {
-
-        StartCoroutine(Timer());
+        StartCoroutine(PauseWait(_timerValue));
     }
-    IEnumerator Timer()
+    public IEnumerator PauseWait(int _timerValue)
     {
-        
-        while (_delay> 0)
+        int count = 0;
+
+        while (count< _timerValue)
         {
-            _delay--;
-            _timerText.text= _delay.ToString();
-            yield return new WaitForSecondsRealtime(1);
+            var text = _timerValue - count;
+
+            _timerText.text= text.ToString();
+            yield return new WaitForSecondsRealtime(1f);
+            count++;
 
         }
-    
 
 
-        yield return null;
+        _timer.SetActive(false);
+
     }
+
 
 
 }

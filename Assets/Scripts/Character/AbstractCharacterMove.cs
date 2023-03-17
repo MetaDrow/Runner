@@ -155,7 +155,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     public void Jump()
     {
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) && _isGround)
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && _isGround)
         {
 
             _animator.Play("RunningJump");
@@ -179,7 +179,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
         }
 
 
-        if ((_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.LeftArrow) ||  Input.GetKeyDown(KeyCode.A)) || (_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))) //out of if 
+        if (_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.LeftArrow)  || _rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
         {
             _animator.Play("Fall");
         }

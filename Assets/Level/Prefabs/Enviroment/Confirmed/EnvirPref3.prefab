@@ -15621,7 +15621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4770756351458797755
 Transform:
   m_ObjectHideFlags: 0
@@ -60336,8 +60336,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4770756351960674551}
   m_LocalRotation: {x: -0.9063079, y: -0, z: -0, w: 0.42261827}
-  m_LocalPosition: {x: 33.4, y: -1.1702251, z: 2.6338856}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 33.39998, y: -1.7102237, z: 5.4768887}
+  m_LocalScale: {x: 200, y: 200, z: 200}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4770756352792923499}
@@ -65419,7 +65419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4770756352072012716
 Transform:
   m_ObjectHideFlags: 0
@@ -70487,7 +70487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4770756352161213772
 Transform:
   m_ObjectHideFlags: 0
@@ -70776,7 +70776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4770756352200685374
 Transform:
   m_ObjectHideFlags: 0
@@ -104996,7 +104996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4770756352525634740
 Transform:
   m_ObjectHideFlags: 0
@@ -134320,7 +134320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4770756352862592922
 Transform:
   m_ObjectHideFlags: 0
@@ -153810,7 +153810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4770756353291208170
 Transform:
   m_ObjectHideFlags: 0
@@ -153984,7 +153984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4770756353316364919
 Transform:
   m_ObjectHideFlags: 0

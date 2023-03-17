@@ -2299,7 +2299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1106888442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2393,7 +2393,7 @@ MonoBehaviour:
   - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
   - {fileID: 9204305306953937699, guid: 318105cfebc4c00438a9cb8b7f748d64, type: 3}
   - {fileID: 1740127601171683913, guid: 8d43e71c3df67d64b9e3fec4dbcde1fe, type: 3}
-  prefabCount: 12
+  prefabCount: 5
   playerPrefabDistance: 500
   PrefabSpawned: []
 --- !u!1 &1276511057
@@ -2942,7 +2942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 408, y: 292}
+  m_AnchoredPosition: {x: 37, y: 100}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418652504
@@ -2967,8 +2967,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 82815f22522316a4387e07e1c8d28484, type: 2}
+  m_sharedMaterial: {fileID: 8055955768179352151, guid: 82815f22522316a4387e07e1c8d28484, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2992,8 +2992,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.61
-  m_fontSizeBase: 53.61
+  m_fontSize: 169.6
+  m_fontSizeBase: 169.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3055,7 +3055,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timerText: {fileID: 1418652504}
-  _delay: 3
   _timer: {fileID: 1418652502}
 --- !u!1 &1451525998
 GameObject:
@@ -3264,11 +3263,10 @@ MonoBehaviour:
   BasePrefabs:
   - {fileID: 416124416046598104, guid: 4f15e5baa50f1684f9c55cceab00dfc3, type: 3}
   - {fileID: 3940807530295589293, guid: 2547442527639104f85909dd4db02b80, type: 3}
+  - {fileID: 7641788511406841936, guid: f98763cbd34bf1745bdb71d1cdb4ed0c, type: 3}
   - {fileID: 1206062418525649438, guid: 86a6ed120db96b64ab825a5e0906f2bb, type: 3}
-  - {fileID: 8239507711380671358, guid: 89d2389f747d2d742becdfa90d4c0e94, type: 3}
-  - {fileID: 1764755996674494262, guid: 80bac8db8f529bc45bc1c6558500c812, type: 3}
-  prefabCount: 11
-  playerPrefabDistance: 120
+  prefabCount: 20
+  playerPrefabDistance: 145
   PrefabSpawned: []
 --- !u!1 &1585678317
 GameObject:

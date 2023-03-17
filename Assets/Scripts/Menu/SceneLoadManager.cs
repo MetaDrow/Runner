@@ -69,6 +69,7 @@ internal class SceneLoadManager : MonoBehaviour
         _character._isPlay = false;
         _character._animator.SetBool("Run", false);
         _timer._timer.SetActive(true);
+        _timer.StartCorutine();
         yield return new WaitForSecondsRealtime(5f);
 
         ResumeGame();

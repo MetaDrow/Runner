@@ -44,7 +44,7 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
             {
                 case Pos.SpawnOne:
                     //newObstacle.transform.position = _platformPrefab.Center.transform.position;
-                   newObstacle.transform.position = _platformPrefab.PrefabSpawned[_platformPrefab.PrefabSpawned.Count - 1].SpawnTwo.position;
+                   newObstacle.transform.position = _platformPrefab.PrefabSpawned[_platformPrefab.PrefabSpawned.Count - 1].SpawnOne.position;
                     //newObstacle.transform.position = _spawnRand.position;
                     break;
                 case Pos.SpawnTwo:
