@@ -173,7 +173,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     }
     internal void FallJump()
     {
-        if (_rb.transform.position.y > 5)
+        if (_rb.transform.position.y > 5) //|| _rb.transform.position.y < 5 && ! _isGround)
         {
             _animator.Play("Fall");
         }

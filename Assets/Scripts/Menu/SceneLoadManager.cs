@@ -31,7 +31,7 @@ internal class SceneLoadManager : MonoBehaviour
     {
 
         yield return new WaitForSecondsRealtime(2f);
-        this._character.transform.position = _platform.PrefabSpawned[2].Begin.transform.position;
+        this._character.transform.position = _platform.PrefabSpawned[_platform.PrefabSpawned.Count- 1].Begin.transform.position;////
 
         this._character._line = 0;
         this._character._targetPos = this._character._rb.transform.position;

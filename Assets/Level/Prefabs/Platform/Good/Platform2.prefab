@@ -41,8 +41,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7419206230404941199}
   - component: {fileID: 6843713524392920233}
-  m_Layer: 0
-  m_Name: GameObject
+  m_Layer: 2
+  m_Name: DeathCollider
   m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005492935144628073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.57, y: 0, z: 15.24}
+  m_LocalPosition: {x: 0, y: -10.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,8 +74,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6977874, y: 0.8393772, z: 9.35791}
-  m_Center: {x: -0.3488937, y: -0.43712696, z: 0.9648037}
+  m_Size: {x: 8.248873, y: 8.387995, z: 67.88927}
+  m_Center: {x: 0.15303135, y: 1.2888098, z: 10.269974}
 --- !u!1 &2101104859600082285
 GameObject:
   m_ObjectHideFlags: 0
