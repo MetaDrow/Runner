@@ -11,7 +11,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     internal Vector3 _targetSpeed;
 
     internal Rigidbody _rb;
-    internal Animator _animator;
+    [SerializeField] internal Animator _animator;
 
     internal int _line = 0;
 
@@ -30,7 +30,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
 
     internal bool _isStrafe;
 
-    internal void CheckPosition()
+    protected void CheckPosition()
     {
 
         if ((_rb.transform.position.x > _targetPos.x && _targetSpeed.x > 0) || (_rb.transform.position.x < _targetPos.x && _targetSpeed.x < 0))
@@ -43,34 +43,62 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
         }
 
 
+
+
     }
-    public void MoveForward()
+    public void MoveForward(float _speed)
+    {
+        _animator.SetBool("Run", true);
+        _rb.transform.position += new Vector3(0, 0, _speed * Time.deltaTime);
+
+    }
+
+    protected void MoveInput(ref int line)
     {
 
-        _rb.transform.position += new Vector3(0, 0, _speed * Time.fixedDeltaTime);
-    }
-
-    public void Move(ref int line)
-    {
-
-        if (Input.GetKeyDown(KeyCode.D)) //&& _isJump == false) ///&& _rb.transform.position.x < -_lineStep)
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) 
         {
 
             MoveRight(ref line);
 
         }
 
-        if (Input.GetKeyDown(KeyCode.A)) //&& _isJump == false)// && _rb.transform.position.x > _lineStep)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) //&& _isJump == false)// && _rb.transform.position.x > _lineStep)
         {
 
             MoveLeft(ref line);
 
         }
-
-
-
     }
 
+    void StrafeRightCalculation()
+    {
+        _targetSpeed = new Vector3(_lineChangeSpeed, 0, 0);
+        _targetPos = new Vector3(_targetPos.x + _lineStep, _rb.transform.position.y, _rb.transform.position.z); //0?
+        _rb.velocity = _targetSpeed;
+
+
+        if (_rb.position.y < 0.1)
+        {
+            _isStrafe = true;
+            _animator.Play("StrafeRight");
+
+        }
+    }
+    void StrafeLeftCalculation()
+    {
+        _targetSpeed = new Vector3(-_lineChangeSpeed, 0, 0);
+        _targetPos = new Vector3(_targetPos.x - _lineStep, _rb.transform.position.y, _rb.transform.position.z);
+        _rb.velocity = _targetSpeed;
+
+
+        if (_rb.position.y < 0.1)
+        {
+            _isStrafe = true;
+            _animator.Play("StrafeLeft");
+
+        }
+    }
     public void MoveRight(ref int line)
     {
         switch (line)
@@ -78,18 +106,9 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
             case 0:
                 {
 
-                    _targetSpeed = new Vector3(_lineChangeSpeed, 0, 0);
-                    _targetPos = new Vector3(_targetPos.x + _lineStep, _rb.transform.position.y, _rb.transform.position.z); //0?
-                    _rb.velocity = _targetSpeed;
+                    StrafeRightCalculation();
 
-                    line++;
-                    if (_rb.position.y < 0.1)
-                    {
-                        _animator.Play("StrafeRight");
-                        _isStrafe = true;
-                    }
-
-
+                    _line++;
                     break;
 
                 }
@@ -97,16 +116,8 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
             case -1:
                 {
 
-                    _targetSpeed = new Vector3(_lineChangeSpeed, 0, 0);
-                    _targetPos = new Vector3(_targetPos.x + _lineStep, _rb.transform.position.y, _rb.transform.position.z); //0?
-                    _rb.velocity = _targetSpeed;
-
-                    line++;
-                    if (_rb.position.y < 0.1)
-                    {
-                        _animator.Play("StrafeRight");
-                        _isStrafe = true;
-                    }
+                    StrafeRightCalculation();
+                    _line++;
                     break;
 
                 }
@@ -122,35 +133,16 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
             case 0:
                 {
 
-                    _targetSpeed = new Vector3(-_lineChangeSpeed, 0, 0);
-                    _targetPos = new Vector3(_targetPos.x - _lineStep, _rb.transform.position.y, _rb.transform.position.z);
-                    _rb.velocity = _targetSpeed;
-
-                    line--;
-                    if (_rb.position.y < 0.1)
-                    {
-                        _animator.Play("StrafeLeft");
-                        _isStrafe = true;
-                    }
-
+                    StrafeLeftCalculation();
+                    _line--;
                     break;
                 }
 
             case 1:
                 {
 
-                    _targetSpeed = new Vector3(-_lineChangeSpeed, 0, 0);
-                    _targetPos = new Vector3(_targetPos.x - _lineStep, _rb.transform.position.y, _rb.transform.position.z);
-                    _rb.velocity = _targetSpeed;
-
-                    line--;
-                    if (_rb.position.y < 0.1)
-                    {
-                        _animator.Play("StrafeLeft");
-                        _isStrafe = true;
-                    }
-
-
+                    StrafeLeftCalculation();
+                    _line--;
                     break;
                 }
 
@@ -163,7 +155,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     public void Jump()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && _isGround)
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && _isGround)
         {
 
             _animator.Play("RunningJump");
@@ -173,7 +165,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
             //  _isJump = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             _rb.velocity = new Vector3(0, -1, 0) * _jumpForce;
             _animator.Play("Roll");
@@ -187,7 +179,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
         }
 
 
-        if ((_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.A)) || (_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.D))) //out of if 
+        if (_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.LeftArrow)  || _rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
         {
             _animator.Play("Fall");
         }

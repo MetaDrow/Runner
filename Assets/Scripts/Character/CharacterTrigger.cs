@@ -6,7 +6,7 @@ using UnityEngine.TextCore.Text;
 internal class CharacterTrigger : MonoBehaviour 
 {
     [SerializeField] SceneLoadManager _sceneLoadManager;
-    public AbstractCharacterMove _character;
+    [SerializeField] AbstractCharacterMove _character;
     void Update()
     {
         RestartGame();
@@ -32,8 +32,9 @@ internal class CharacterTrigger : MonoBehaviour
 
         if (CompareTag("Player") && other.CompareTag("Faster"))
         {
-            _character._speed += 0.001f;
+            _character._speed += 0.1f;
         }
+
     }
 
 

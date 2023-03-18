@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 771755751145448745}
   - component: {fileID: -3380322353055112769}
+  - component: {fileID: 3661338487639978578}
   m_Layer: 0
   m_Name: IcePivot
   m_TagString: Untagged
@@ -40,13 +41,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771755751145448744}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b83de9e9ce2c8894d9ba97acca8f66e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _obstaclePrefab: {fileID: 771755751145448744}
   _speed: 10
+--- !u!114 &3661338487639978578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771755751145448744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fc66e859fc14445a849547a1e97f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3216404195484551491
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,8 +88,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3216404195484551491}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.208, z: 0}
-  m_LocalScale: {x: 64, y: 64.000015, z: 64.000015}
+  m_LocalPosition: {x: 0.28, y: -0.0749, z: 0}
+  m_LocalScale: {x: 64, y: 64.000015, z: 113.59144}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 771755751145448745}
@@ -155,7 +168,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3216404195484551491}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.01897688, y: 0.01865444, z: 0.0071742246}

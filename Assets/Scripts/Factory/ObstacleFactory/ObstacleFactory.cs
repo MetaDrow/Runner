@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObstacleFactory : BaseFactory<ObstaclePrefab>
 {
     [SerializeField] internal PlatformFactory _platformPrefab;
+    //[SerializeField] internal PlatformPrefab _platformPrefasb;
+    [SerializeField] internal List<Transform> _spawnPoints;
     enum Pos { SpawnOne =1, SpawnTwo = 2, SpawnThree = 3 };
     void Start()
     {
@@ -34,6 +36,7 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
             ObstaclePrefab newObstacle = Instantiate(BasePrefabs[Random.Range(0, BasePrefabs.Length)]);
             PrefabSpawned.Add(newObstacle);
 
+           // var _spawnRand = _platformPrefasb._spawnPoint[Random.Range(0, 2)];
             // var pos = (Pos)Random.Range(0, 3);
             var pos = (Pos)i;
 
@@ -41,7 +44,8 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
             {
                 case Pos.SpawnOne:
                     //newObstacle.transform.position = _platformPrefab.Center.transform.position;
-                    newObstacle.transform.position = _platformPrefab.PrefabSpawned[_platformPrefab.PrefabSpawned.Count - 1].SpawnOne.position;
+                   newObstacle.transform.position = _platformPrefab.PrefabSpawned[_platformPrefab.PrefabSpawned.Count - 1].SpawnOne.position;
+                    //newObstacle.transform.position = _spawnRand.position;
                     break;
                 case Pos.SpawnTwo:
                     //newObstacle.transform.position = _platformPrefab.Center.transform.position;
