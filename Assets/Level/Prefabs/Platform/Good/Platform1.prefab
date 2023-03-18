@@ -192,9 +192,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Begin: {fileID: 4909908290829974488}
   End: {fileID: 1402106534314641460}
-  SpawnOne: {fileID: 5646594553341067503}
-  SpawnTwo: {fileID: 4578371603623204034}
-  SpawnThree: {fileID: 3843985817914944048}
+  SpawnOne: {fileID: 0}
+  SpawnTwo: {fileID: 0}
+  SpawnThree: {fileID: 0}
+  _spawnDots:
+  - {fileID: 3954945697423196358}
+  - {fileID: 8013144653749559720}
+  - {fileID: 954199965567097377}
 --- !u!1 &6658807999807006975
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +377,7 @@ MonoBehaviour:
   SpawnOne: {fileID: 0}
   SpawnTwo: {fileID: 0}
   SpawnThree: {fileID: 0}
+  _spawnDots: []
 --- !u!64 &1891671246954340205
 MeshCollider:
   m_ObjectHideFlags: 0

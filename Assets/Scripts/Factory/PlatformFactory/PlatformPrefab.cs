@@ -11,6 +11,7 @@ public class PlatformPrefab : BasePrefab
     [SerializeField] internal Transform SpawnTwo;
     [SerializeField] internal Transform SpawnThree;
 
+    public GameObject[] _spawnDots; 
 
     void Update()
     {
