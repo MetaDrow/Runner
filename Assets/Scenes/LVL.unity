@@ -2325,7 +2325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1106888442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2342,12 +2342,12 @@ MonoBehaviour:
   - {fileID: -983317168353294389, guid: 6a5830180050f4e4c909d088219201dd, type: 3}
   Character: {fileID: 6919996581300334270}
   BasePrefabs:
-  - {fileID: 4039029156795810579, guid: 6391bc6b9cc0cf3468b91039dbc8d5aa, type: 3}
-  - {fileID: -995795772647951750, guid: d83b39a24a532d443b3bf53944c58dde, type: 3}
-  - {fileID: -995795772647951750, guid: d83b39a24a532d443b3bf53944c58dde, type: 3}
-  - {fileID: 3661338487639978578, guid: 2f503a0230df09a439973fa78d7b62cf, type: 3}
-  - {fileID: 3696339488196982979, guid: 3261998615f2af641bae91c35982b961, type: 3}
-  - {fileID: 8750991851108851735, guid: 53e218ed05099fe48a932932c518734b, type: 3}
+  - {fileID: 8883709373875778256, guid: b62117f13522c1d44b84ffc5e2c79b59, type: 3}
+  - {fileID: 7841912021852989681, guid: acd911f9241700847983de10e7421a5d, type: 3}
+  - {fileID: 6142080882262371552, guid: 30fe4f4e2a5ca20449ee0b6e33ff3e66, type: 3}
+  - {fileID: -7531223710236882099, guid: ef7f1d14544a7b94188a33a42b3e7aa2, type: 3}
+  - {fileID: 6960515009588088540, guid: 8fe7691bdf0ad894b9462c3f0ee39ad2, type: 3}
+  - {fileID: 5206815659630725142, guid: b58f9d6203526d842822cf0092bb9cd5, type: 3}
   prefabCount: 70
   playerPrefabDistance: 110
   PrefabSpawned: []
@@ -2384,7 +2384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1145568169
 Transform:
   m_ObjectHideFlags: 0
@@ -3289,6 +3289,8 @@ MonoBehaviour:
   BasePrefabs:
   - {fileID: 416124416046598104, guid: 4f15e5baa50f1684f9c55cceab00dfc3, type: 3}
   - {fileID: 3940807530295589293, guid: 2547442527639104f85909dd4db02b80, type: 3}
+  - {fileID: 7641788511406841936, guid: f98763cbd34bf1745bdb71d1cdb4ed0c, type: 3}
+  - {fileID: 1206062418525649438, guid: 86a6ed120db96b64ab825a5e0906f2bb, type: 3}
   prefabCount: 7
   playerPrefabDistance: 145
   PrefabSpawned: []
@@ -5103,7 +5105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768241012871699471}
   m_LocalRotation: {x: -0.7071068, y: -1.05367416e-10, z: -0.0000000018966075, w: 0.7071067}
-  m_LocalPosition: {x: 0.000000003871973, y: -0.000000059604645, z: 0.00000011232644}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 99.999985, z: 100.000015}
   m_ConstrainProportionsScale: 0
   m_Children: []
