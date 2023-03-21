@@ -29,6 +29,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     // internal bool _isJump;
 
     internal bool _isStrafe;
+    public List<AnimationClip> Anim = new List<AnimationClip>();
 
     protected void CheckPosition()
     {
@@ -48,6 +49,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
     }
     public void MoveForward(float _speed)
     {
+
         _animator.SetBool("Run", true);
         _rb.transform.position += new Vector3(0, 0, _speed * Time.deltaTime);
 
@@ -157,7 +159,8 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
 
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && _isGround)
         {
-
+            var Rand = Random.Range(0, Anim.Count);
+           // animation.Play(Anim[Rand].name);
             _animator.Play("RunningJump");
             _rb.velocity = Vector3.up * _jumpForce;
             // _rb.velocity = new Vector3(0, 1, 0) * _jumpForce;
@@ -179,7 +182,7 @@ abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
         }
 
 
-        if (_rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.LeftArrow)  || _rb.transform.position.y > 0.01f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
+        if (_rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.LeftArrow)  || _rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
         {
             _animator.Play("Fall");
         }
