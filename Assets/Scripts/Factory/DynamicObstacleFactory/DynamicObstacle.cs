@@ -4,35 +4,6 @@ using UnityEngine;
 
 public class DynamicObstacle : MonoBehaviour
 {
-    public GameObject _DynamicObstacle;
-    public Collider _collider;
-    void Start()
-    {
-        _DynamicObstacle.SetActive(false);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-       // OnTrigeredObstacle( _collider);
-    }
-
-    public void OnTrigeredObstacle(Collider _collider)
-    {
-        if (CompareTag("DynamicObstacleTrigger") && _collider.CompareTag("Player"))
-        {
-            _DynamicObstacle.SetActive(true);
-
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (CompareTag("DynamicObstacleTrigger") && other.CompareTag("Player"))
-        {
-            _DynamicObstacle.SetActive(true);
-
-        }
-
-    }
+    internal List<DynamicObstacle> obstacles;
 }

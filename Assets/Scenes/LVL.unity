@@ -973,7 +973,7 @@ MonoBehaviour:
   - {fileID: -6701379942698079868, guid: 53e218ed05099fe48a932932c518734b, type: 3}
   - {fileID: 96026072926676235, guid: 3261998615f2af641bae91c35982b961, type: 3}
   - {fileID: -3380322353055112769, guid: 2f503a0230df09a439973fa78d7b62cf, type: 3}
-  firstObstacle: {fileID: 7475955083198253850, guid: 6a5830180050f4e4c909d088219201dd, type: 3}
+  firstObstacle: {fileID: 0}
   _generator: {fileID: 119329578}
   _platform: {fileID: 6301604675348349745, guid: 2d003c2b5923abe4faf4ca7c3704dfc6, type: 3}
   Character: {fileID: 0}
@@ -2165,7 +2165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02826c5c7599be643aa55707f9e33229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: {fileID: 0}
+  _character: {fileID: 5533770783437514740}
   _platform: {fileID: 1527598922}
   _DeathMenu: {fileID: 1372297084}
   _camera: {fileID: 238482935}
@@ -2201,7 +2201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1106888442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2215,7 +2215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _firstPrefab:
-  - {fileID: -983317168353294389, guid: 6a5830180050f4e4c909d088219201dd, type: 3}
+  - {fileID: 8883709373875778256, guid: b62117f13522c1d44b84ffc5e2c79b59, type: 3}
   Character: {fileID: 1885825039740681610}
   BasePrefabs:
   - {fileID: 8883709373875778256, guid: b62117f13522c1d44b84ffc5e2c79b59, type: 3}
@@ -2225,6 +2225,7 @@ MonoBehaviour:
   - {fileID: 6960515009588088540, guid: 8fe7691bdf0ad894b9462c3f0ee39ad2, type: 3}
   - {fileID: 5206815659630725142, guid: b58f9d6203526d842822cf0092bb9cd5, type: 3}
   - {fileID: 4213009111991937793, guid: 61931659fb9911141a3973ade0c87f52, type: 3}
+  - {fileID: 3204499784433120128, guid: 3294630d9d381684ca2c0472785df685, type: 3}
   prefabCount: 80
   playerPrefabDistance: 110
   PrefabSpawned: []
@@ -2260,7 +2261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1145568169
 Transform:
   m_ObjectHideFlags: 0
