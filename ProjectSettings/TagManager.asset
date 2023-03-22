@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - NotLose
   - Faster
+  - DynamicObstacleTrigger
   layers:
   - Default
   - TransparentFX
