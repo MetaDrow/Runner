@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 internal class SceneLoadManager : MonoBehaviour
 {
-    public AbstractCharacterMove _character;
+    public AbstractCharacter _character;
     public PlatformFactory _platform;
     public DeathMenu _DeathMenu;
     public Camera _camera;
@@ -31,6 +31,7 @@ internal class SceneLoadManager : MonoBehaviour
     {
 
         yield return new WaitForSecondsRealtime(2f);
+
         this._character.transform.position = _platform.PrefabSpawned[2]._playerSpawnPosition.transform.position;////
 
         this._character._line = 0;

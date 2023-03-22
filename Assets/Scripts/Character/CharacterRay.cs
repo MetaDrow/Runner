@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,11 @@ public class CharacterRay : MonoBehaviour
 {
     Ray _ray;
     RaycastHit _hit;
+    public Transform _pointer;
+    Action _action;
     void Start()
     {
-       
+        //_action = Ray();
     }
 
 
@@ -25,9 +28,10 @@ public class CharacterRay : MonoBehaviour
 
         Debug.DrawRay(transform.position, _ray.direction);
 
-        if(Physics.Raycast(_ray,out _hit))
+        if (Physics.Raycast(_ray,out _hit))
         {
-            Debug.Log(_hit.collider.gameObject.name);
+            
+            Debug.Log(_hit.collider.gameObject.transform.position.z);
         }
     }
 }

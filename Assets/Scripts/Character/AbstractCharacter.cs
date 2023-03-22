@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract class AbstractCharacterMove : MonoBehaviour, IMove, IJump
+abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 {
     [SerializeField] private float _lineChangeSpeed = 6;
     [SerializeField] private float _lineStep = 0;
