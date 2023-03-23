@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlatformPrefab : BasePrefab
@@ -22,12 +23,15 @@ public class PlatformPrefab : BasePrefab
     {
         for (int i = 0; i < _dynamicDots.Length; i++)
         {
+  
            // _dynamicObstacle.obstacle obstacles = Instantiate(_dynamicDots[Random.Range(0, _dynamicDots.Length)]);
-           DynamicObstacle newObstacleDynamic = Instantiate(_dynamicObstacle[Random.Range(0, _dynamicDots.Length)]);
+           DynamicObstacle newObstacleDynamic = Instantiate(_dynamicObstacle[Random.Range(0, _dynamicDots.Length)], _playerSpawnPosition);
            newObstacleDynamic.transform.position = _dynamicDots[i].transform.position;
 
 
         }
 
     }
+
+
 }
