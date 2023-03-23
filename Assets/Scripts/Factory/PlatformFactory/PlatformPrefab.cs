@@ -25,7 +25,7 @@ public class PlatformPrefab : BasePrefab
         {
   
            // _dynamicObstacle.obstacle obstacles = Instantiate(_dynamicDots[Random.Range(0, _dynamicDots.Length)]);
-           DynamicObstacle newObstacleDynamic = Instantiate(_dynamicObstacle[Random.Range(0, _dynamicDots.Length)], _playerSpawnPosition);
+           DynamicObstacle newObstacleDynamic = Instantiate(_dynamicObstacle[Random.Range(0, _dynamicObstacle.Length)], _playerSpawnPosition);
            newObstacleDynamic.transform.position = _dynamicDots[i].transform.position;
 
 

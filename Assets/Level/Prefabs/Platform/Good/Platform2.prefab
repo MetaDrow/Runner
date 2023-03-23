@@ -139,7 +139,7 @@ MonoBehaviour:
   - {fileID: 7603907752828455768}
   - {fileID: 5629545467193995539}
   _dynamicObstacle:
-  - {fileID: 9200383079287380320, guid: 6b3495f32184cfd46aa2c3eeee8f8318, type: 3}
+  - {fileID: 485673453683493156, guid: 3261998615f2af641bae91c35982b961, type: 3}
   - {fileID: 9200383079287380320, guid: 6a5830180050f4e4c909d088219201dd, type: 3}
   _dynamicDots:
   - {fileID: 8977318160802089763}
