@@ -16,6 +16,8 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
 
     void Update()
     {
+
+
         if (Character.localPosition.z > PrefabSpawned[PrefabSpawned.Count - 1].transform.position.z - playerPrefabDistance)
         {
             Spawned();
@@ -32,20 +34,22 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
     {
 
 
-        for (int i =0; i < _platformFactory.PrefabSpawned[^1]._spawnDots.Length; i++)
+        for (int i =0; i < _platformFactory.PrefabSpawned[_platformFactory.PrefabSpawned.Count - 1]._spawnDots.Length; i++)
         {
             ObstaclePrefab newObstacle = Instantiate(BasePrefabs[Random.Range(0, BasePrefabs.Length)]);
             PrefabSpawned.Add(newObstacle);
 
-            newObstacle.transform.position = _platformFactory.PrefabSpawned[^ 1]._spawnDots[i].transform.position;
+            newObstacle.transform.position = _platformFactory.PrefabSpawned[_platformFactory.PrefabSpawned.Count - 1]._spawnDots[i].transform.position;
         }
+
+
         return null;
 
     }
 
     void ObstacleCheck()
     {
-        if (PrefabSpawned.Count >= prefabCount)
+        if (PrefabSpawned.Count > prefabCount)
         {
             Destroy(PrefabSpawned[1].gameObject);
             PrefabSpawned.RemoveAt(0);
