@@ -9,7 +9,7 @@ public class PlatformPrefab : BasePrefab
     public GameObject[] _spawnDots;
     /////////////////////////////////////////////
 
-    //public DynamicObstacle _dynamicObstacles;
+   // internal List<DynamicObstacle> _obstacles;
 
 
 
@@ -25,7 +25,8 @@ public class PlatformPrefab : BasePrefab
            // _dynamicObstacle.obstacle obstacles = Instantiate(_dynamicDots[Random.Range(0, _dynamicDots.Length)]);
            DynamicObstacle newObstacleDynamic = Instantiate(_dynamicObstacle[Random.Range(0, _dynamicDots.Length)]);
            newObstacleDynamic.transform.position = _dynamicDots[i].transform.position;
-           
+
+
         }
 
     }
