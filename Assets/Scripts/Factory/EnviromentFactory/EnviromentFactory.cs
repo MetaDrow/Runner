@@ -30,6 +30,7 @@ public class EnviromentFactory :BaseFactory<EnviromentPrefab>
     {
         EnviromentPrefab newPlatform = Instantiate(BasePrefabs[Random.Range(0, BasePrefabs.Length)]);
         newPlatform.transform.position = Vector3.zero;
+        PrefabSpawned.Add(newPlatform);
     }
     public override EnviromentPrefab Spawned()
     {
