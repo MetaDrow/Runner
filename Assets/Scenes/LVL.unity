@@ -2292,8 +2292,9 @@ MonoBehaviour:
   - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
   Character: {fileID: 1885825039740681610}
   BasePrefabs:
-  - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
+  - {fileID: -5125056030690107251, guid: 2fbd27f5c4ecf444bbb231585f2e34e5, type: 3}
   - {fileID: 1740127601171683913, guid: 8d43e71c3df67d64b9e3fec4dbcde1fe, type: 3}
+  - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
   prefabCount: 5
   playerPrefabDistance: 500
   PrefabSpawned: []
