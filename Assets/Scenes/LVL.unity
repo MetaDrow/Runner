@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.009
@@ -2201,7 +2201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1106888442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2221,6 +2221,10 @@ MonoBehaviour:
   - {fileID: -3374695123898312101, guid: 95b8f04efb4733b41853fda27bdb3591, type: 3}
   - {fileID: 8883709373875778256, guid: b62117f13522c1d44b84ffc5e2c79b59, type: 3}
   - {fileID: 7841912021852989681, guid: acd911f9241700847983de10e7421a5d, type: 3}
+  - {fileID: -7531223710236882099, guid: ef7f1d14544a7b94188a33a42b3e7aa2, type: 3}
+  - {fileID: 6960515009588088540, guid: 8fe7691bdf0ad894b9462c3f0ee39ad2, type: 3}
+  - {fileID: 5206815659630725142, guid: b58f9d6203526d842822cf0092bb9cd5, type: 3}
+  - {fileID: 4213009111991937793, guid: 61931659fb9911141a3973ade0c87f52, type: 3}
   prefabCount: 55
   playerPrefabDistance: 100
   PrefabSpawned: []
@@ -2256,7 +2260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1145568169
 Transform:
   m_ObjectHideFlags: 0
@@ -2288,7 +2292,6 @@ MonoBehaviour:
   - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
   Character: {fileID: 1885825039740681610}
   BasePrefabs:
-  - {fileID: -1430380835449240666, guid: c91e90769d485dd44b5cfe51db5408e3, type: 3}
   - {fileID: -4909172835996970565, guid: 757b7aacdd2e1c14c81857247681ab75, type: 3}
   - {fileID: 1740127601171683913, guid: 8d43e71c3df67d64b9e3fec4dbcde1fe, type: 3}
   prefabCount: 5
@@ -3248,7 +3251,6 @@ MonoBehaviour:
   Character: {fileID: 1885825039740681610}
   BasePrefabs:
   - {fileID: 416124416046598104, guid: 4f15e5baa50f1684f9c55cceab00dfc3, type: 3}
-  - {fileID: 3940807530295589293, guid: 2547442527639104f85909dd4db02b80, type: 3}
   prefabCount: 7
   playerPrefabDistance: 145
   PrefabSpawned: []
@@ -4013,7 +4015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1514243633249632460, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2182130510796266102, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
       propertyPath: m_RootOrder

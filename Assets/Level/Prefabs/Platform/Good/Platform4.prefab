@@ -199,7 +199,6 @@ MonoBehaviour:
   - {fileID: 5247483297115802754}
   - {fileID: 7668574977920903331}
   _dynamicObstacle:
-  - {fileID: 9200383079287380320, guid: 6a5830180050f4e4c909d088219201dd, type: 3}
   - {fileID: 485673453683493156, guid: 3261998615f2af641bae91c35982b961, type: 3}
   _dynamicDots:
   - {fileID: 7424410369389888759}
