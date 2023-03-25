@@ -27,6 +27,7 @@ internal class UILoadManager : MonoBehaviour
     }
     public void MainMenu()
     {
+        _onPause = false;
         ResumeGame();
         ScoreManager.coin = 0;
         SceneManager.LoadScene("MainMenu");
@@ -118,6 +119,7 @@ internal class UILoadManager : MonoBehaviour
 
     public void Restart()
     {
+        _onPause = false;
         _audio.Stop();
         ResumeGame();
 
