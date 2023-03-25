@@ -16,22 +16,35 @@ internal class UILoadManager : MonoBehaviour
     public Pause _pause;
     public AudioSource _audio;
 
+    internal static bool _onPause =false;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && _onPause == false)
         {
+            
             Pause();
         }
     }
-
+    public void MainMenu()
+    {
+        ResumeGame();
+        ScoreManager.coin = 0;
+        SceneManager.LoadScene("MainMenu");
+    }
     public  void Pause()
     {
-        PauseGame();
-        _pause._pauseUI.SetActive(true);
+        if(_onPause == false)
+        {
+            _onPause = true;
+            PauseGame();
+            _pause._pauseUI.SetActive(true);
+        }
+
+
     }
     internal void Trigger()
     {
-
+        _onPause = true;
         _character._isPlay = false;
 
         _character._animator.Play("Death");
@@ -44,7 +57,7 @@ internal class UILoadManager : MonoBehaviour
     }
 
     IEnumerator DeathPanel()
-    {
+    {   
 
         yield return new WaitForSecondsRealtime(2f);
 
@@ -58,19 +71,14 @@ internal class UILoadManager : MonoBehaviour
         _character._isPlay = true;
     }
 
-    public void MainMenu()
-    {
-        ResumeGame();
-        ScoreManager.coin = 0;
-        SceneManager.LoadScene("MainMenu");
-    }
+
 
 
     public void Resume()
     {
         if (ScoreManager.coin >= 1)
         {
-
+            _onPause = true;
             _DeathMenu.deathPanel.SetActive(false);
             ScoreManager.instance._gameUI.SetActive(true);
            // ResumeGame();
@@ -84,6 +92,7 @@ internal class UILoadManager : MonoBehaviour
 
     public void ResumeOnPause()
     {
+        _onPause = false;
         _DeathMenu.deathPanel.SetActive(false);
         _pause._pauseUI.SetActive(false);
         ResumeGame();
@@ -103,6 +112,7 @@ internal class UILoadManager : MonoBehaviour
         ScoreManager.coin -= 1;
         _character._animator.SetBool("Run", true);
         _character._isPlay = true;
+        _onPause = false;
 
     }
 
