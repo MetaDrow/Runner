@@ -5,7 +5,7 @@ using UnityEngine.TextCore.Text;
 
 internal class CharacterTrigger : MonoBehaviour 
 {
-    [SerializeField] SceneLoadManager _sceneLoadManager;
+    [SerializeField] UILoadManager _sceneLoadManager;
     [SerializeField] AbstractCharacter _character;
     void Update()
     {

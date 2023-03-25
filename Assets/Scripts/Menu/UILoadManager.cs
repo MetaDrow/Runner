@@ -6,13 +6,29 @@ using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
-internal class SceneLoadManager : MonoBehaviour
+internal class UILoadManager : MonoBehaviour
 {
     public AbstractCharacter _character;
     public PlatformFactory _platform;
     public DeathMenu _DeathMenu;
     public Camera _camera;
     public TimerCountdown _timer;
+    public Pause _pause;
+    public AudioSource _audio;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause();
+        }
+    }
+
+    public  void Pause()
+    {
+        PauseGame();
+        _pause._pauseUI.SetActive(true);
+    }
     internal void Trigger()
     {
 
@@ -22,7 +38,7 @@ internal class SceneLoadManager : MonoBehaviour
 
 
         PauseGame();
-        _DeathMenu._audio.Pause();
+        _audio.Pause();
         StartCoroutine(DeathPanel());
 
     }
@@ -65,6 +81,15 @@ internal class SceneLoadManager : MonoBehaviour
         }
 
     }
+
+    public void ResumeOnPause()
+    {
+        _DeathMenu.deathPanel.SetActive(false);
+        _pause._pauseUI.SetActive(false);
+        ResumeGame();
+        ScoreManager.instance._gameUI.SetActive(true);
+        _character._isPlay = true;
+    }
     IEnumerator ResumeGamePause()
     {
         _character._isPlay = false;
@@ -74,14 +99,24 @@ internal class SceneLoadManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(5f);
 
         ResumeGame();
-        _DeathMenu._audio.Play();
+        _audio.Play();
         ScoreManager.coin -= 1;
         _character._animator.SetBool("Run", true);
         _character._isPlay = true;
 
     }
 
-    void ResumeGame()
+    public void Restart()
+    {
+        _audio.Stop();
+        ResumeGame();
+
+        ScoreManager.coin = 0;
+        SceneManager.LoadScene("LVL");
+        ScoreManager.instance._gameUI.SetActive(true);
+    }
+
+    internal void ResumeGame()
     {
         Time.timeScale = 1;
     }

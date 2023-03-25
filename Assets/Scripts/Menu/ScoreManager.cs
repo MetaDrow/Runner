@@ -26,7 +26,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         instance = this;
         Reset();
         if (PlayerPrefs.HasKey("SaveScore"))
