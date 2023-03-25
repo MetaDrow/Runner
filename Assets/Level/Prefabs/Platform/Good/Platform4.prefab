@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1355424609012730472
 Transform:
   m_ObjectHideFlags: 0
@@ -120,8 +120,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.479169, y: 1, z: 1}
-  m_Center: {x: -0.018975735, y: 0, z: 0}
+  m_Size: {x: 5.479169, y: 1.5697311, z: 1.114006}
+  m_Center: {x: -0.018975735, y: 0.28486556, z: 0.05700302}
 --- !u!114 &3773577887706930038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,11 +195,11 @@ MonoBehaviour:
   End: {fileID: 7476289159615066386}
   _spawnDots:
   - {fileID: 4227883417992073197}
-  - {fileID: 701629779166616283}
   - {fileID: 5247483297115802754}
   - {fileID: 7668574977920903331}
   _dynamicObstacle:
   - {fileID: 485673453683493156, guid: 3261998615f2af641bae91c35982b961, type: 3}
+  - {fileID: 3347440723203325293, guid: 53e218ed05099fe48a932932c518734b, type: 3}
   _dynamicDots:
   - {fileID: 7424410369389888759}
   - {fileID: 8349154299480073416}
@@ -258,7 +258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5247483297115802754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 0, z: 13.25}
+  m_LocalPosition: {x: 1.75, y: 0, z: 22.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

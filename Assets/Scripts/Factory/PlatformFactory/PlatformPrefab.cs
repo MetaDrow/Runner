@@ -21,12 +21,16 @@ public class PlatformPrefab : BasePrefab
 
    internal void SpawnDynamicObstacle()
     {
-        for (int i = 0; i < _dynamicDots.Length; i++)
+        for (int i = 0; i < _dynamicObstacle.Length; i++)
         {
   
            // _dynamicObstacle.obstacle obstacles = Instantiate(_dynamicDots[Random.Range(0, _dynamicDots.Length)]);
            DynamicObstacle newObstacleDynamic = Instantiate(_dynamicObstacle[Random.Range(0, _dynamicObstacle.Length)], _playerSpawnPosition);
-           newObstacleDynamic.transform.position = _dynamicDots[i].transform.position;
+            var pos = Random.Range(0, _dynamicDots.Length);
+
+            newObstacleDynamic.transform.position = _dynamicDots[pos].transform.position;
+
+           //newObstacleDynamic.transform.position = _dynamicDots[i].transform.position;
 
 
         }
