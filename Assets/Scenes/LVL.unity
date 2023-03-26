@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.26693752, g: 0.26817498, b: 0.3061607, a: 1}
+  m_IndirectSpecularColor: {r: 0.26692224, g: 0.26753196, b: 0.30551288, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -147,7 +147,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22611831}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 505b4a8b86b625746be0819238a50f60, type: 3}
@@ -339,8 +339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: -4.993744}
-  m_SizeDelta: {x: 419.6771, y: 47.792}
+  m_AnchoredPosition: {x: -0, y: -19}
+  m_SizeDelta: {x: 240.981, y: 47.792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &114343867
 Animator:
@@ -2134,8 +2134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 850, y: 444.52515}
-  m_SizeDelta: {x: 65.5408, y: 73.6288}
+  m_AnchoredPosition: {x: 857.87463, y: 431.7956}
+  m_SizeDelta: {x: 108.4609, y: 99.0878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &585406156
 MonoBehaviour:
@@ -2206,7 +2206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
+  m_Color: {r: 0.5471698, g: 0.46527758, b: 0.1414382, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2558,7 +2558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.30877686, y: -3.786499}
+  m_AnchoredPosition: {x: 0.3088379, y: -3.786499}
   m_SizeDelta: {x: 21.3884, y: 28.353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &668127186
@@ -3193,8 +3193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 320.2, y: -9.6}
-  m_SizeDelta: {x: 687.6296, y: 50}
+  m_AnchoredPosition: {x: 11.837, y: -10.3759}
+  m_SizeDelta: {x: 175.98, y: 51.2566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &906495582
 Animator:
@@ -3299,7 +3299,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -6.4772034, y: 0.52051926, z: 507.61746, w: 15.679487}
+  m_margin: {x: -6.4772034, y: 0.52051926, z: 12.83293, w: 15.679487}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3830,7 +3830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1145568169
 Transform:
   m_ObjectHideFlags: 0
@@ -5654,11 +5654,7 @@ MonoBehaviour:
   - {fileID: 416124416046598104, guid: 92a218aecfe671e4e87799b4fa7ee76e, type: 3}
   Character: {fileID: 1885825039740681610}
   BasePrefabs:
-  - {fileID: 416124416046598104, guid: 4f15e5baa50f1684f9c55cceab00dfc3, type: 3}
-  - {fileID: 3940807530295589293, guid: 2547442527639104f85909dd4db02b80, type: 3}
-  - {fileID: 7641788511406841936, guid: f98763cbd34bf1745bdb71d1cdb4ed0c, type: 3}
-  - {fileID: 1206062418525649438, guid: 86a6ed120db96b64ab825a5e0906f2bb, type: 3}
-  - {fileID: 8239507711380671358, guid: 89d2389f747d2d742becdfa90d4c0e94, type: 3}
+  - {fileID: 3940807530295589293, guid: 1c63959e263bad5469ac6ee53e05a96c, type: 3}
   prefabCount: 7
   playerPrefabDistance: 145
   PrefabSpawned: []
@@ -6975,7 +6971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5235523592244969480, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
       propertyPath: _jumpForce
-      value: 8
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5235523592244969480, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
       propertyPath: _lineChangeSpeed

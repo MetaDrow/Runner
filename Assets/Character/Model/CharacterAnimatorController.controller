@@ -66,9 +66,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.07836598
   m_TransitionOffset: 0
-  m_ExitTime: 0.7115385
+  m_ExitTime: 0.9815533
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -134,7 +134,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Roll
-  m_Speed: 1.4
+  m_Speed: 1.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 9075636912049668206}
@@ -235,7 +235,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RunningJump
-  m_Speed: 1
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6130117180670481834}
@@ -476,7 +476,7 @@ AnimatorStateMachine:
     m_Position: {x: -210, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1697185360878185265}
-    m_Position: {x: 504.40958, y: 325.49976, z: 0}
+    m_Position: {x: 500, y: 330, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
