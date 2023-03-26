@@ -2134,8 +2134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 857.87463, y: 431.7956}
-  m_SizeDelta: {x: 108.4609, y: 99.0878}
+  m_AnchoredPosition: {x: 849.4856, y: 428.1394}
+  m_SizeDelta: {x: 138.0658, y: 140.9355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &585406156
 MonoBehaviour:
@@ -2213,7 +2213,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c2fd287e3f8015a41b18c5954dcea84d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb899adb9dff9cc4abe4f462a983ca50, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3788,12 +3788,12 @@ MonoBehaviour:
   - {fileID: 8883709373875778256, guid: b62117f13522c1d44b84ffc5e2c79b59, type: 3}
   Character: {fileID: 1885825039740681610}
   BasePrefabs:
-  - {fileID: -3374695123898312101, guid: 95b8f04efb4733b41853fda27bdb3591, type: 3}
+  - {fileID: 2752631568511679611, guid: 65a1cdf785955ae4f870eb0b36fafa83, type: 3}
   - {fileID: 8883709373875778256, guid: b62117f13522c1d44b84ffc5e2c79b59, type: 3}
   - {fileID: 7841912021852989681, guid: acd911f9241700847983de10e7421a5d, type: 3}
   - {fileID: -7531223710236882099, guid: ef7f1d14544a7b94188a33a42b3e7aa2, type: 3}
-  - {fileID: 6960515009588088540, guid: 8fe7691bdf0ad894b9462c3f0ee39ad2, type: 3}
   - {fileID: 5206815659630725142, guid: b58f9d6203526d842822cf0092bb9cd5, type: 3}
+  - {fileID: 6960515009588088540, guid: 8fe7691bdf0ad894b9462c3f0ee39ad2, type: 3}
   - {fileID: 4213009111991937793, guid: 61931659fb9911141a3973ade0c87f52, type: 3}
   prefabCount: 55
   playerPrefabDistance: 100
@@ -5654,7 +5654,16 @@ MonoBehaviour:
   - {fileID: 416124416046598104, guid: 92a218aecfe671e4e87799b4fa7ee76e, type: 3}
   Character: {fileID: 1885825039740681610}
   BasePrefabs:
+  - {fileID: 416124416046598104, guid: 38fb52aa21ed1b8438504bf716352edc, type: 3}
   - {fileID: 3940807530295589293, guid: 1c63959e263bad5469ac6ee53e05a96c, type: 3}
+  - {fileID: 7641788511406841936, guid: fb2ddca00e380544f85059b78e205a0f, type: 3}
+  - {fileID: 1206062418525649438, guid: 9318fd964d87bbe4fac985e90ebd0d1b, type: 3}
+  - {fileID: 8239507711380671358, guid: 84cf20a5f81b01645a99577f2a0529de, type: 3}
+  - {fileID: 416124416046598104, guid: 4f15e5baa50f1684f9c55cceab00dfc3, type: 3}
+  - {fileID: 3940807530295589293, guid: 2547442527639104f85909dd4db02b80, type: 3}
+  - {fileID: 7641788511406841936, guid: f98763cbd34bf1745bdb71d1cdb4ed0c, type: 3}
+  - {fileID: 1206062418525649438, guid: 86a6ed120db96b64ab825a5e0906f2bb, type: 3}
+  - {fileID: 8239507711380671358, guid: 89d2389f747d2d742becdfa90d4c0e94, type: 3}
   prefabCount: 7
   playerPrefabDistance: 145
   PrefabSpawned: []
