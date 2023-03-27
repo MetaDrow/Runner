@@ -73,7 +73,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
         }
     }
 
-    void StrafeRightCalculation()
+    internal void StrafeRightCalculation()
     {
         _targetSpeed = new Vector3(_lineChangeSpeed, 0, 0);
         _targetPos = new Vector3(_targetPos.x + _lineStep, _rb.transform.position.y, _rb.transform.position.z); //0?

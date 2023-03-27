@@ -35,6 +35,13 @@ internal class CharacterTrigger : MonoBehaviour
             _character._speed += 0.2f;
         }
 
+        if (CompareTag("Player") && other.CompareTag("BoxImpact"))
+        {
+            _character._line = 0;
+            // _character._rb.velocity = _character._targetPos;
+            _character.StrafeRightCalculation();
+            //_character._rb.velocity += new Vector3(-2, 2, 0);
+        }
     }
 
 

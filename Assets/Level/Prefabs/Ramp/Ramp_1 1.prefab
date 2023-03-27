@@ -1118,8 +1118,8 @@ GameObject:
   - component: {fileID: 4313109378835520942}
   - component: {fileID: 6453618469949570035}
   m_Layer: 0
-  m_Name: DeathCollider
-  m_TagString: Finish
+  m_Name: Right
+  m_TagString: BoxImpact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1150,8 +1150,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6914085, y: 1.077653, z: 7.2026696}
-  m_Center: {x: 0.0017289183, y: 0.060145557, z: 1.0681756}
+  m_Size: {x: 1.7398121, y: 1.077653, z: 7.2026696}
+  m_Center: {x: 0.025930699, y: 0.060145557, z: 1.0681756}
 --- !u!1 &4767730184784327317
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ TagManager:
   - NotLose
   - Faster
   - DynamicObstacleTrigger
+  - LeftBoxImpact
+  - RightBoxImpact
+  - BoxImpact
   layers:
   - Default
   - TransparentFX
