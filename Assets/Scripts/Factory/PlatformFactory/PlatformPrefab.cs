@@ -1,19 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlatformPrefab : BasePrefab
 {
-    [SerializeField] internal Transform Begin;
+    [SerializeField] internal Transform _playerSpawnPosition;
     [SerializeField] internal Transform End;
+    public GameObject[] _spawnDots;
+    /////////////////////////////////////////////
 
-    [SerializeField] internal Transform SpawnOne;
-    [SerializeField] internal Transform SpawnTwo;
-    [SerializeField] internal Transform SpawnThree;
+   // internal List<DynamicObstacle> _obstacles;
 
 
-    void Update()
+
+    public DynamicObstacle[] _dynamicObstacle;
+    public GameObject[] _dynamicDots;
+
+
+
+   internal void SpawnDynamicObstacle()
     {
-        Move();
+        for (int i = 0; i < _dynamicObstacle.Length; i++)
+        {
+  
+           // _dynamicObstacle.obstacle obstacles = Instantiate(_dynamicDots[Random.Range(0, _dynamicDots.Length)]);
+           DynamicObstacle newObstacleDynamic = Instantiate(_dynamicObstacle[Random.Range(0, _dynamicObstacle.Length)], _playerSpawnPosition);
+            var pos = Random.Range(0, _dynamicDots.Length);
+
+            newObstacleDynamic.transform.position = _dynamicDots[pos].transform.position;
+
+           //newObstacleDynamic.transform.position = _dynamicDots[i].transform.position;
+
+
+        }
+
     }
+
+
 }

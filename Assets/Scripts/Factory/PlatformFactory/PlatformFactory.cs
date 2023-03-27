@@ -11,6 +11,7 @@ public class PlatformFactory : BaseFactory<PlatformPrefab>
     void Start()
     {
         PrefabSpawned.Add(_firstPrefab[0]);
+
         FirstSpawn();
 
 
@@ -28,9 +29,25 @@ public class PlatformFactory : BaseFactory<PlatformPrefab>
 
     }
 
-    void FirstSpawn()
+    internal void LearnSpawn()
     {
         for(int i =0; i<3; i++)
+        {
+            //FirstPrefabs.Add(_firstPrefab[0]);
+            PlatformPrefab newFirstPlatform = Instantiate(_firstPrefab[Random.Range(0, _firstPrefab.Length)]);
+
+            var previousEndPos = new Vector3(0, 0, PrefabSpawned[PrefabSpawned.Count - 1].End.position.z);
+
+            var endPos = newFirstPlatform.End.position;
+
+            newFirstPlatform.transform.position = previousEndPos + endPos;
+            PrefabSpawned.Add(newFirstPlatform);
+        }
+
+    }
+    internal void FirstSpawn()
+    {
+        for (int i = 0; i < 2; i++)
         {
             //FirstPrefabs.Add(_firstPrefab[0]);
             PlatformPrefab newFirstPlatform = Instantiate(_firstPrefab[Random.Range(0, _firstPrefab.Length)]);

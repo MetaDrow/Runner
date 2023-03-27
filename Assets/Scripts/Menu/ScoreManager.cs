@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] internal static ScoreManager instance;
     [SerializeField] internal TextMeshProUGUI ScoreText;
     [SerializeField] internal TextMeshProUGUI HightScoreText;
-    [SerializeField] internal AbstractCharacterMove _character;
+    [SerializeField] internal AbstractCharacter _character;
 
     private float time;
     public  float score;
@@ -26,7 +26,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         instance = this;
         Reset();
         if (PlayerPrefs.HasKey("SaveScore"))

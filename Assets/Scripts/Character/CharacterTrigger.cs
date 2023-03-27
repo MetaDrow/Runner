@@ -5,8 +5,8 @@ using UnityEngine.TextCore.Text;
 
 internal class CharacterTrigger : MonoBehaviour 
 {
-    [SerializeField] SceneLoadManager _sceneLoadManager;
-    [SerializeField] AbstractCharacterMove _character;
+    [SerializeField] UILoadManager _sceneLoadManager;
+    [SerializeField] AbstractCharacter _character;
     void Update()
     {
         RestartGame();
@@ -30,11 +30,18 @@ internal class CharacterTrigger : MonoBehaviour
 
         }
 
-        if (CompareTag("Player") && other.CompareTag("Faster"))
+        if (CompareTag("Player") && other.CompareTag("Faster") && _character._speed <= 15f)
         {
-            _character._speed += 0.1f;
+            _character._speed += 0.2f;
         }
 
+        if (CompareTag("Player") && other.CompareTag("BoxImpact"))
+        {
+            _character._line = 0;
+            // _character._rb.velocity = _character._targetPos;
+            _character.StrafeRightCalculation();
+            //_character._rb.velocity += new Vector3(-2, 2, 0);
+        }
     }
 
 

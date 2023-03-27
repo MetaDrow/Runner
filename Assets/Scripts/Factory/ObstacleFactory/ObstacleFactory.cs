@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class ObstacleFactory : BaseFactory<ObstaclePrefab>
 {
-    [SerializeField] internal PlatformFactory _platformPrefab;
-    //[SerializeField] internal PlatformPrefab _platformPrefasb;
-    [SerializeField] internal List<Transform> _spawnPoints;
+    [SerializeField] internal PlatformFactory _platformFactory;
+
     enum Pos { SpawnOne =1, SpawnTwo = 2, SpawnThree = 3 };
     void Start()
     {
@@ -17,6 +16,8 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
 
     void Update()
     {
+
+
         if (Character.localPosition.z > PrefabSpawned[PrefabSpawned.Count - 1].transform.position.z - playerPrefabDistance)
         {
             Spawned();
@@ -31,45 +32,24 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
 
     public override ObstaclePrefab Spawned()
     {
-        for (int i = 1; i < 4; i++)
+
+
+        for (int i =0; i < _platformFactory.PrefabSpawned[_platformFactory.PrefabSpawned.Count - 1]._spawnDots.Length; i++)
         {
             ObstaclePrefab newObstacle = Instantiate(BasePrefabs[Random.Range(0, BasePrefabs.Length)]);
             PrefabSpawned.Add(newObstacle);
 
-           // var _spawnRand = _platformPrefasb._spawnPoint[Random.Range(0, 2)];
-            // var pos = (Pos)Random.Range(0, 3);
-            var pos = (Pos)i;
-
-            switch (pos)
-            {
-                case Pos.SpawnOne:
-                    //newObstacle.transform.position = _platformPrefab.Center.transform.position;
-                   newObstacle.transform.position = _platformPrefab.PrefabSpawned[_platformPrefab.PrefabSpawned.Count - 1].SpawnOne.position;
-                    //newObstacle.transform.position = _spawnRand.position;
-                    break;
-                case Pos.SpawnTwo:
-                    //newObstacle.transform.position = _platformPrefab.Center.transform.position;
-                    newObstacle.transform.position = _platformPrefab.PrefabSpawned[_platformPrefab.PrefabSpawned.Count - 1].SpawnTwo.position;
-
-                    break;
-                case Pos.SpawnThree:
-                    //newObstacle.transform.position = _platformPrefab.Center.transform.position;
-                    newObstacle.transform.position = _platformPrefab.PrefabSpawned[_platformPrefab.PrefabSpawned.Count - 1].SpawnThree.position;
-
-                    break;
-            }
-
-
-
-
+            newObstacle.transform.position = _platformFactory.PrefabSpawned[_platformFactory.PrefabSpawned.Count - 1]._spawnDots[i].transform.position;
         }
+
+
         return null;
 
     }
 
     void ObstacleCheck()
     {
-        if (PrefabSpawned.Count >= prefabCount)
+        if (PrefabSpawned.Count > prefabCount)
         {
             Destroy(PrefabSpawned[1].gameObject);
             PrefabSpawned.RemoveAt(0);

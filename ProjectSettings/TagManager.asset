@@ -8,6 +8,10 @@ TagManager:
   - Coin
   - NotLose
   - Faster
+  - DynamicObstacleTrigger
+  - LeftBoxImpact
+  - RightBoxImpact
+  - BoxImpact
   layers:
   - Default
   - TransparentFX
