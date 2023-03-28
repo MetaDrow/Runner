@@ -32,6 +32,7 @@ public class ScoreManager : MonoBehaviour
         if (PlayerPrefs.HasKey("SaveScore"))
         {
             hightScore = PlayerPrefs.GetInt("SaveScore");
+
         }
         
 
@@ -70,6 +71,7 @@ public class ScoreManager : MonoBehaviour
         {
             hightScore = (int)score;
             PlayerPrefs.SetInt("SaveScore", hightScore);
+
         }
     }
 
