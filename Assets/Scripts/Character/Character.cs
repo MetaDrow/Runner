@@ -5,6 +5,7 @@ using UnityEngine;
 internal class Character : AbstractCharacter
 {
 
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -14,7 +15,6 @@ internal class Character : AbstractCharacter
         // _isJump = false;
         _speed = 10f;
         _isStrafe = false;
-
 
     }
 
@@ -48,6 +48,7 @@ internal class Character : AbstractCharacter
             }
 
         }
+
 
     }
 

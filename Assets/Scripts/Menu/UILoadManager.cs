@@ -15,6 +15,7 @@ internal class UILoadManager : MonoBehaviour
     public TimerCountdown _timer;
     public Pause _pause;
     public AudioSource _audio;
+    public AudioManager _audioManager;
 
     internal static bool _onPause =false;
     private void Update()
@@ -39,6 +40,7 @@ internal class UILoadManager : MonoBehaviour
             _onPause = true;
             PauseGame();
             _pause._pauseUI.SetActive(true);
+            _character._audioRun.enabled = false;
         }
 
 

@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed92700247dbd0f46831595a89d54bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collider: {fileID: 3261050602583412105, guid: 481c2e045761eaa4b919890313335ede, type: 3}
+  _collider: {fileID: 4680281749472207188, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
   _platformPrefab: {fileID: 3940807530295589293}
 --- !u!1 &6415166365355659729
 GameObject:

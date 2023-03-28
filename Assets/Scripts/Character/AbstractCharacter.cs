@@ -30,6 +30,9 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
     internal bool _isStrafe;
     public List<AnimationClip> Anim = new List<AnimationClip>();
+    ///////////////////////////////////////////////////////////////
+    [SerializeField] internal AudioSource _audioRun;
+
 
     protected void CheckPosition()
     {
@@ -51,6 +54,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     {
 
         _animator.SetBool("Run", true);
+        _audioRun.enabled = true;
         _rb.transform.position += new Vector3(0, 0, _speed * Time.deltaTime);
 
     }
@@ -60,14 +64,14 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) 
         {
-
+            _audioRun.enabled = false;
             MoveRight(ref line);
 
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) //&& _isJump == false)// && _rb.transform.position.x > _lineStep)
         {
-
+            _audioRun.enabled = false;
             MoveLeft(ref line);
 
         }
@@ -87,7 +91,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         }
     }
-    void StrafeLeftCalculation()
+    internal void StrafeLeftCalculation()
     {
         _targetSpeed = new Vector3(-_lineChangeSpeed, 0, 0);
         _targetPos = new Vector3(_targetPos.x - _lineStep, _rb.transform.position.y, _rb.transform.position.z);
@@ -159,17 +163,21 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && _isGround)
         {
+            _audioRun.enabled = false;
+
             var Rand = Random.Range(0, Anim.Count);
            // animation.Play(Anim[Rand].name);
             _animator.Play("RunningJump");
             _rb.velocity = Vector3.up * _jumpForce;
             // _rb.velocity = new Vector3(0, 1, 0) * _jumpForce;
             _isGround = false;
+           // _audioJump.enabled = false;
             //  _isJump = true;
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
+            _audioRun.enabled = false;
             _rb.velocity = new Vector3(0, -1, 0) * _jumpForce;
             _animator.Play("Roll");
         }
