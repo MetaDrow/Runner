@@ -3772,7 +3772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1106888442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3780,7 +3780,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106888441}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10da0b6bda5272749bd9851425180867, type: 3}
   m_Name: 
@@ -7045,7 +7045,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2114526938709451154, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470313098042200715, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470313098042200715, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4680281749472207184, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
       propertyPath: _sceneLoadManager
@@ -7055,8 +7063,21 @@ PrefabInstance:
       propertyPath: _lineStep
       value: 1.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4680281749472207190, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
+      propertyPath: _audioCoinUp
+      value: 
+      objectReference: {fileID: 880546366931240611}
+    - target: {fileID: 5454417919959133775, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
+--- !u!82 &880546366931240611 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2470313098042200715, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}
+  m_PrefabInstance: {fileID: 880546366931240610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1885825039740681610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1590790605946305320, guid: 7993db98420e62a41bbf46677fb5e4cc, type: 3}

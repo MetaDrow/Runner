@@ -32,7 +32,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     public List<AnimationClip> Anim = new List<AnimationClip>();
     ///////////////////////////////////////////////////////////////
     [SerializeField] internal AudioSource _audioRun;
-
+    [SerializeField] internal AudioSource _audioCoinUp;
 
     protected void CheckPosition()
     {

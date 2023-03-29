@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.TextCore.Text;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -24,8 +25,11 @@ public class ScoreManager : MonoBehaviour
     public GameObject _gameUI;
 
 
+
+
     private void Awake()
     {
+
         //PlayerPrefs.DeleteAll();
         instance = this;
         Reset();
@@ -37,6 +41,8 @@ public class ScoreManager : MonoBehaviour
         
 
     }
+
+
     void FixedUpdate()
     {
         instance.AddScore();
@@ -83,5 +89,6 @@ public class ScoreManager : MonoBehaviour
     void CoinCount()
     {
         coinText.text = coin.ToString();
+
     }
 }

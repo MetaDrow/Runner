@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CoinTrigger : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider other)
     {
 
-
-        if (this.CompareTag("Coin") && collision.CompareTag("Player"))
+        if (this.CompareTag("Coin") && other.CompareTag("Player"))
         {
+
             ScoreManager.coin++;
             Destroy(this.gameObject);
         }
 
     }
+
+
 }

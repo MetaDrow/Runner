@@ -180,6 +180,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5912182321380895186}
     m_Modifications:
+    - target: {fileID: -6569494073781523275, guid: 1192afaf4b9b0d54496519ceaf52ac84, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8324457082090853352, guid: 1192afaf4b9b0d54496519ceaf52ac84, type: 3}
       propertyPath: m_Name
       value: Coin
