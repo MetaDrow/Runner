@@ -15,6 +15,7 @@ internal class UILoadManager : MonoBehaviour
     public TimerCountdown _timer;
     public Pause _pause;
     public AudioSource _audio;
+    public AudioManager _audioManager;
 
     internal static bool _onPause =false;
     private void Update()
@@ -36,9 +37,11 @@ internal class UILoadManager : MonoBehaviour
     {
         if(_onPause == false)
         {
+            _character._audioRun.Pause();
             _onPause = true;
             PauseGame();
             _pause._pauseUI.SetActive(true);
+            _character._audioRun.enabled = false;
         }
 
 
@@ -53,12 +56,14 @@ internal class UILoadManager : MonoBehaviour
 
         PauseGame();
         _audio.Pause();
+        _character._audioRun.Pause();
         StartCoroutine(DeathPanel());
+
 
     }
 
     IEnumerator DeathPanel()
-    {   
+    {
 
         yield return new WaitForSecondsRealtime(2f);
 
@@ -70,6 +75,7 @@ internal class UILoadManager : MonoBehaviour
 
         _DeathMenu.deathPanel.SetActive(true);
         _character._isPlay = true;
+        
     }
 
 
@@ -79,6 +85,7 @@ internal class UILoadManager : MonoBehaviour
     {
         if (ScoreManager.coin >= 1)
         {
+
             _onPause = true;
             _DeathMenu.deathPanel.SetActive(false);
             ScoreManager.instance._gameUI.SetActive(true);
@@ -99,6 +106,7 @@ internal class UILoadManager : MonoBehaviour
         ResumeGame();
         ScoreManager.instance._gameUI.SetActive(true);
         _character._isPlay = true;
+        _character._audioRun.Play();
     }
     IEnumerator ResumeGamePause()
     {
@@ -110,6 +118,7 @@ internal class UILoadManager : MonoBehaviour
 
         ResumeGame();
         _audio.Play();
+        _character._audioRun.Play();
         ScoreManager.coin -= 1;
         _character._animator.SetBool("Run", true);
         _character._isPlay = true;
