@@ -11,11 +11,15 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject _controlPanel;
 
     private bool _isActive;
+    private void Awake()
+    {
+        _audioSource.Play();
+    }
     private void Start()
     {
         _controlPanel.SetActive(false);
         _isActive = false;
-        _audioSource.Play();
+
 
     }
     private void Update()
@@ -27,6 +31,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         _animator.Play("RunningMenu");
+
         _fader.FadeToNextLevel();
         _audioSource.Stop();
     }

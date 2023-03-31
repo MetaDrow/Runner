@@ -9,6 +9,8 @@ public class Fader : MonoBehaviour
     private int levelToLoad;
 
 
+
+
     public void FadeToNextLevel()
     {
          FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
@@ -17,6 +19,7 @@ public class Fader : MonoBehaviour
 
     public void FadeToLevel(int levelIndex)
     {
+
         levelToLoad = levelIndex;
         _animator.SetTrigger("FaderOut");
 
