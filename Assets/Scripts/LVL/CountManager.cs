@@ -1,11 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.TextCore.Text;
-using UnityEngine.SceneManagement;
-using System.IO;
 
 public class CountManager : MonoBehaviour
 {
@@ -14,7 +8,7 @@ public class CountManager : MonoBehaviour
     [SerializeField] internal TextMeshProUGUI HightScoreText;
     [SerializeField] internal AbstractCharacter _character;
 
-    public  float score;
+    public float score;
     internal int hightScore;
 
     ///////////////////////////////////////
@@ -34,33 +28,34 @@ public class CountManager : MonoBehaviour
     {
         SaveSystem.SaveHightScore(this);
     }
-     
-    public void LoadScore() 
+
+    public void LoadScore()
     {
         PlayerScore playerScore = SaveSystem.LoadScore();
 
         hightScore = playerScore.HightScore;
     }
+
     void FixedUpdate()
     {
         instance.AddScore();
 
         ScoreText.text = score.ToString();
-        HightScoreText.text= hightScore.ToString();
+        HightScoreText.text = hightScore.ToString();
 
         CoinCount();
     }
 
     void AddScore()
     {
-         score = (int)_character.transform.position.z;
+        score = (int)_character.transform.position.z;
         score++;
         AddHightScore();
     }
 
     void AddHightScore()
     {
-        if(score > hightScore)
+        if (score > hightScore)
         {
             hightScore = (int)score;
         }
@@ -74,6 +69,5 @@ public class CountManager : MonoBehaviour
     void CoinCount()
     {
         coinText.text = coin.ToString();
-
     }
 }

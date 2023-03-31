@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
@@ -23,13 +21,10 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
     [SerializeField] private float _jumpForce = 2f;
 
-
     private bool _isGround;
 
-    // internal bool _isJump;
-
     internal bool _isStrafe;
-    public List<AnimationClip> Anim = new List<AnimationClip>();
+
     ///////////////////////////////////////////////////////////////
     [SerializeField] internal AudioSource _audioRun;
     [SerializeField] internal AudioSource _audioCoinUp;
@@ -43,8 +38,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
         {
             _targetSpeed = Vector3.zero;
             _rb.velocity = _targetSpeed;
-            //_rb.transform.position = _targetSpeed;
-            _rb.position = _targetPos; // если убрать = плавное смещение во время прыжка 
+            _rb.position = _targetPos; 
             _isStrafe = false;
         }
 
@@ -83,7 +77,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) //&& _isJump == false)// && _rb.transform.position.x > _lineStep)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) 
         {
              _audioRun.enabled = false;
 
@@ -95,7 +89,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     internal void StrafeRightCalculation()
     {
         _targetSpeed = new Vector3(_lineChangeSpeed, 0, 0);
-        _targetPos = new Vector3(_targetPos.x + _lineStep, _rb.transform.position.y, _rb.transform.position.z); //0?
+        _targetPos = new Vector3(_targetPos.x + _lineStep, _rb.transform.position.y, _rb.transform.position.z); 
         _rb.velocity = _targetSpeed;
 
 
@@ -126,12 +120,9 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
         {
             case 0:
                 {
-
                     StrafeRightCalculation();
-
                     _line++;
                     break;
-
                 }
 
             case -1:
@@ -142,7 +133,6 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
                     break;
 
                 }
-
         }
 
     }
@@ -153,7 +143,6 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
         {
             case 0:
                 {
-
                     StrafeLeftCalculation();
                     _line--;
                     break;
@@ -161,33 +150,23 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
             case 1:
                 {
-
                     StrafeLeftCalculation();
                     _line--;
                     break;
                 }
-
         }
 
     }
-
-
 
     public void Jump()
     {
 
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && _isGround)
         {
-            // _audioRun.enabled = false;
-
-            var Rand = Random.Range(0, Anim.Count);
-           // animation.Play(Anim[Rand].name);
             _animator.Play("RunningJump");
             _rb.velocity = Vector3.up * _jumpForce;
-            // _rb.velocity = new Vector3(0, 1, 0) * _jumpForce;
+
             _isGround = false;
-           // _audioJump.enabled = false;
-            //  _isJump = true;
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
@@ -199,24 +178,19 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     }
     internal void FallJump()
     {
-        if (_rb.transform.position.y > 5) //|| _rb.transform.position.y < 5 && ! _isGround)
+        if (_rb.transform.position.y > 5) 
         {
-
             _animator.Play("Fall");
         }
-
 
         if (_rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.LeftArrow)  || _rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
         {
             _animator.Play("Fall");
         }
-
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-
         _isGround = true;
-        // _isJump = false;
     }
 }

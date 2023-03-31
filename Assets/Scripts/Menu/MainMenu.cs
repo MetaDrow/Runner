@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 
-
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] internal TextMeshProUGUI _hightScoreText;
@@ -15,23 +14,21 @@ public class MainMenu : MonoBehaviour
     {
         _audioSource.Play();
     }
+
     private void Start()
     {
         _controlPanel.SetActive(false);
         _isActive = false;
-
-
     }
+
     private void Update()
     {
         _hightScoreText.text = CountManager.instance.hightScore.ToString();
-
-
     }
+
     public void Play()
     {
         _animator.Play("RunningMenu");
-
         _fader.FadeToNextLevel();
         _audioSource.Stop();
     }
