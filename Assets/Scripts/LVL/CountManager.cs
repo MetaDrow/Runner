@@ -14,7 +14,6 @@ public class CountManager : MonoBehaviour
     [SerializeField] internal TextMeshProUGUI HightScoreText;
     [SerializeField] internal AbstractCharacter _character;
 
-    private float time;
     public  float score;
     internal int hightScore;
 
@@ -24,25 +23,10 @@ public class CountManager : MonoBehaviour
 
     public GameObject _gameUI;
 
-
-
-
     private void Awake()
     {
-
-        //PlayerPrefs.DeleteAll();
         instance = this;
         Reset();
-
-        /*
-        if (PlayerPrefs.HasKey("SaveScore"))
-        {
-            hightScore = PlayerPrefs.GetInt("SaveScore");
-
-        }
-        */
-        // LoadScore();
-
         LoadScore();
     }
 
@@ -65,14 +49,6 @@ public class CountManager : MonoBehaviour
         HightScoreText.text= hightScore.ToString();
 
         CoinCount();
-        /*
-        if(PlayerPrefs.GetInt("score")<= hightScore)
-        {
-            PlayerPrefs.SetInt("score", hightScore);
-        }
-        HightScoreText.text = PlayerPrefs.GetInt("score").ToString();
-        */
-
     }
 
     void AddScore()
@@ -80,10 +56,6 @@ public class CountManager : MonoBehaviour
          score = (int)_character.transform.position.z;
         score++;
         AddHightScore();
-
-
-
-
     }
 
     void AddHightScore()
@@ -91,9 +63,6 @@ public class CountManager : MonoBehaviour
         if(score > hightScore)
         {
             hightScore = (int)score;
-            //SaveScore();
-            //PlayerPrefs.SetInt("SaveScore", hightScore);
-
         }
     }
 

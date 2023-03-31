@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerScore
 {
     public int HightScore;
-    public int Coin;
 
     public PlayerScore(CountManager countManager)
     {

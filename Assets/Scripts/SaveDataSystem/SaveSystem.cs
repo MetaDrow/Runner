@@ -15,13 +15,9 @@ public static  class SaveSystem
         formatter.Serialize(stream, playerScore);
         stream.Close();
     }
-    public static void FirstSave(CountManager countManager)
-    {
 
-    }
     public static PlayerScore LoadScore()
     {
-
         string path = Application.persistentDataPath + "/gamedata.gd";
         if(File.Exists(path))
         {
