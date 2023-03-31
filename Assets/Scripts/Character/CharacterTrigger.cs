@@ -31,7 +31,7 @@ internal class CharacterTrigger : MonoBehaviour
 
         }
 
-        if (CompareTag("Player") && other.CompareTag("Faster") && _character._speed <= 15f)
+        if (CompareTag("Player") && other.CompareTag("Faster") && _character._speed <= 20f)
         {
             _character._speed += 0.2f;
         }
