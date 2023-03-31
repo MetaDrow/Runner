@@ -61,6 +61,15 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
   
         _rb.transform.position += new Vector3(0, 0, _speed * Time.deltaTime);
 
+        if(_isGround == true)
+        {
+            _audioRun.enabled = true;
+        }
+        else
+        {
+            _audioRun.enabled = false;
+        }
+
     }
 
     protected void MoveInput(ref int line)
@@ -68,7 +77,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) 
         {
-            //_audioRun.enabled = false;
+            _audioRun.enabled = false;
 
             MoveRight(ref line);
 
@@ -76,7 +85,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) //&& _isJump == false)// && _rb.transform.position.x > _lineStep)
         {
-            // _audioRun.enabled = false;
+             _audioRun.enabled = false;
 
             MoveLeft(ref line);
 
@@ -183,7 +192,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-
+            _audioRun.enabled = false;
             _rb.velocity = new Vector3(0, -1, 0) * _jumpForce;
             _animator.Play("Roll");
         }
