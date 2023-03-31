@@ -26,6 +26,7 @@ internal class CharacterTrigger : MonoBehaviour
     {
         if (CompareTag("Player") && other.CompareTag("Finish"))
         {
+            CountManager.instance.SaveScore();
             _sceneLoadManager.Trigger();
 
         }

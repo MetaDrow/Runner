@@ -30,7 +30,7 @@ internal class UILoadManager : MonoBehaviour
     {
         _onPause = false;
         ResumeGame();
-        ScoreManager.coin = 0;
+        CountManager.coin = 0;
         SceneManager.LoadScene("MainMenu");
     }
     public  void Pause()
@@ -71,7 +71,7 @@ internal class UILoadManager : MonoBehaviour
 
         this._character._line = 0;
         this._character._targetPos = this._character._rb.transform.position;
-        ScoreManager.instance._gameUI.SetActive(false);
+        CountManager.instance._gameUI.SetActive(false);
 
         _DeathMenu.deathPanel.SetActive(true);
         _character._isPlay = true;
@@ -83,12 +83,12 @@ internal class UILoadManager : MonoBehaviour
 
     public void Resume()
     {
-        if (ScoreManager.coin >= 1)
+        if (CountManager.coin >= 1)
         {
 
             _onPause = true;
             _DeathMenu.deathPanel.SetActive(false);
-            ScoreManager.instance._gameUI.SetActive(true);
+            CountManager.instance._gameUI.SetActive(true);
            // ResumeGame();
            // _DeathMenu._audio.Play();
            // ScoreManager.coin -= 1;
@@ -104,7 +104,7 @@ internal class UILoadManager : MonoBehaviour
         _DeathMenu.deathPanel.SetActive(false);
         _pause._pauseUI.SetActive(false);
         ResumeGame();
-        ScoreManager.instance._gameUI.SetActive(true);
+        CountManager.instance._gameUI.SetActive(true);
         _character._isPlay = true;
         _character._audioRun.Play();
     }
@@ -119,7 +119,7 @@ internal class UILoadManager : MonoBehaviour
         ResumeGame();
         _audio.Play();
         _character._audioRun.Play();
-        ScoreManager.coin -= 1;
+        CountManager.coin -= 1;
         _character._animator.SetBool("Run", true);
         _character._isPlay = true;
         _onPause = false;
@@ -132,9 +132,9 @@ internal class UILoadManager : MonoBehaviour
         _audio.Stop();
         ResumeGame();
 
-        ScoreManager.coin = 0;
+        CountManager.coin = 0;
         SceneManager.LoadScene("LVL");
-        ScoreManager.instance._gameUI.SetActive(true);
+        CountManager.instance._gameUI.SetActive(true);
     }
 
     internal void ResumeGame()

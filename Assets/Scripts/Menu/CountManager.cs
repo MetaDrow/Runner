@@ -7,9 +7,9 @@ using UnityEngine.TextCore.Text;
 using UnityEngine.SceneManagement;
 using System.IO;
 
-public class ScoreManager : MonoBehaviour
+public class CountManager : MonoBehaviour
 {
-    [SerializeField] internal static ScoreManager instance;
+    [SerializeField] internal static CountManager instance;
     [SerializeField] internal TextMeshProUGUI ScoreText;
     [SerializeField] internal TextMeshProUGUI HightScoreText;
     [SerializeField] internal AbstractCharacter _character;
@@ -33,16 +33,30 @@ public class ScoreManager : MonoBehaviour
         //PlayerPrefs.DeleteAll();
         instance = this;
         Reset();
+
+        /*
         if (PlayerPrefs.HasKey("SaveScore"))
         {
             hightScore = PlayerPrefs.GetInt("SaveScore");
 
         }
-        
+        */
+        // LoadScore();
 
+        LoadScore();
     }
 
+    public void SaveScore()
+    {
+        SaveSystem.SaveHightScore(this);
+    }
+     
+    public void LoadScore() 
+    {
+        PlayerScore playerScore = SaveSystem.LoadScore();
 
+        hightScore = playerScore.HightScore;
+    }
     void FixedUpdate()
     {
         instance.AddScore();
@@ -66,7 +80,8 @@ public class ScoreManager : MonoBehaviour
          score = (int)_character.transform.position.z;
         score++;
         AddHightScore();
-        
+
+
 
 
     }
@@ -76,7 +91,8 @@ public class ScoreManager : MonoBehaviour
         if(score > hightScore)
         {
             hightScore = (int)score;
-            PlayerPrefs.SetInt("SaveScore", hightScore);
+            //SaveScore();
+            //PlayerPrefs.SetInt("SaveScore", hightScore);
 
         }
     }

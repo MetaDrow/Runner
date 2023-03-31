@@ -16,16 +16,19 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] GameObject _controlPanel;
 
+
+
     private bool _isActive;
     private void Start()
     {
         _controlPanel.SetActive(false);
         _isActive = false;
         _audioSource.Play();
+
     }
     private void Update()
     {
-        _hightScoreText.text = ScoreManager.instance.hightScore.ToString();
+        _hightScoreText.text = CountManager.instance.hightScore.ToString();
 
 
     }
