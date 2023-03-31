@@ -34,6 +34,8 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     [SerializeField] internal AudioSource _audioRun;
     [SerializeField] internal AudioSource _audioCoinUp;
 
+
+
     protected void CheckPosition()
     {
 
@@ -50,11 +52,13 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
 
     }
+
     public void MoveForward(float _speed)
     {
 
         _animator.SetBool("Run", true);
-        _audioRun.enabled = true;
+
+  
         _rb.transform.position += new Vector3(0, 0, _speed * Time.deltaTime);
 
     }
@@ -64,14 +68,16 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) 
         {
-            _audioRun.enabled = false;
+            //_audioRun.enabled = false;
+
             MoveRight(ref line);
 
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) //&& _isJump == false)// && _rb.transform.position.x > _lineStep)
         {
-            _audioRun.enabled = false;
+            // _audioRun.enabled = false;
+
             MoveLeft(ref line);
 
         }
@@ -163,7 +169,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && _isGround)
         {
-            _audioRun.enabled = false;
+            // _audioRun.enabled = false;
 
             var Rand = Random.Range(0, Anim.Count);
            // animation.Play(Anim[Rand].name);
@@ -177,7 +183,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-            _audioRun.enabled = false;
+
             _rb.velocity = new Vector3(0, -1, 0) * _jumpForce;
             _animator.Play("Roll");
         }
@@ -186,6 +192,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     {
         if (_rb.transform.position.y > 5) //|| _rb.transform.position.y < 5 && ! _isGround)
         {
+
             _animator.Play("Fall");
         }
 
@@ -199,6 +206,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
     private void OnCollisionEnter(Collision collision)
     {
+
         _isGround = true;
         // _isJump = false;
     }
