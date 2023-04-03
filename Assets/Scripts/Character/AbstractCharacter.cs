@@ -179,7 +179,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
             _animator.Play("Fall");
         }
 
-        if (_rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
+        if (_rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.LeftArrow) || _rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
         {
             _animator.Play("Fall");
         }
