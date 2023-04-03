@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnviromentFactory :BaseFactory<EnviromentPrefab>
@@ -7,23 +5,16 @@ public class EnviromentFactory :BaseFactory<EnviromentPrefab>
     void Start()
     {
         PrefabSpawned.Add(_firstPrefab[0]);
-        //PrefabSpawned.Add(FirstPrefab);
         FirstPlatform();
         Spawned();
-
-
-
     }
 
     void FixedUpdate()
     {
-
         if (Character.transform.position.z > PrefabSpawned[PrefabSpawned.Count - 1].transform.position.z - playerPrefabDistance)
         {
             Spawned();
         }
-
-
     }
 
     void FirstPlatform()

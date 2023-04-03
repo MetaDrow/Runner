@@ -1,11 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
-using static System.Net.Mime.MediaTypeNames;
 
 public class TimerCountdown : MonoBehaviour
 {
@@ -15,7 +10,6 @@ public class TimerCountdown : MonoBehaviour
 
     void Start()
     {
-
          _timer.SetActive(false);
     }
 
@@ -34,14 +28,7 @@ public class TimerCountdown : MonoBehaviour
             _timerText.text= text.ToString();
             yield return new WaitForSecondsRealtime(1f);
             count++;
-
         }
-
-
         _timer.SetActive(false);
-
     }
-
-
-
 }

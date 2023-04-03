@@ -1,32 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
+
 
 public class PlatformFactory : BaseFactory<PlatformPrefab>
 {
-
-
     void Start()
     {
         PrefabSpawned.Add(_firstPrefab[0]);
 
         FirstSpawn();
-
-
     }
 
     void FixedUpdate()
     {
-
         if (Character.localPosition.z > PrefabSpawned[PrefabSpawned.Count - 1].End.transform.position.z - playerPrefabDistance)
         {
-
             Spawned();
         }
-
-
     }
 
     internal void LearnSpawn()

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleFactory : BaseFactory<ObstaclePrefab>
@@ -10,21 +8,16 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
     void Start()
     {
         PrefabSpawned.Add(_firstPrefab[0]);
-        //PrefabSpawned.Add(FirstPrefab);
     }
-
 
     void Update()
     {
-
-
         if (Character.localPosition.z > PrefabSpawned[PrefabSpawned.Count - 1].transform.position.z - playerPrefabDistance)
         {
             Spawned();
         }
-
-
     }
+
     private void FixedUpdate()
     {
         ObstacleCheck();
@@ -32,8 +25,6 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
 
     public override ObstaclePrefab Spawned()
     {
-
-
         for (int i =0; i < _platformFactory.PrefabSpawned[_platformFactory.PrefabSpawned.Count - 1]._spawnDots.Length; i++)
         {
             ObstaclePrefab newObstacle = Instantiate(BasePrefabs[Random.Range(0, BasePrefabs.Length)]);
@@ -41,10 +32,7 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
 
             newObstacle.transform.position = _platformFactory.PrefabSpawned[_platformFactory.PrefabSpawned.Count - 1]._spawnDots[i].transform.position;
         }
-
-
         return null;
-
     }
 
     void ObstacleCheck()
@@ -55,5 +43,4 @@ public class ObstacleFactory : BaseFactory<ObstaclePrefab>
             PrefabSpawned.RemoveAt(0);
         }
     }
-
 }
