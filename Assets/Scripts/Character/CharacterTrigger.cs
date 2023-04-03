@@ -1,25 +1,10 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.TextCore.Text;
 
 internal class CharacterTrigger : MonoBehaviour 
 {
     [SerializeField] UILoadManager _sceneLoadManager;
     [SerializeField] AbstractCharacter _character;
-    void Update()
-    {
-        RestartGame();
-    }
-
-    private void RestartGame()
-    {
-        if (Input.GetKey(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -46,9 +31,4 @@ internal class CharacterTrigger : MonoBehaviour
             _character.StrafeLeftCalculation();
         }
     }
-
-
-
-
-
 }

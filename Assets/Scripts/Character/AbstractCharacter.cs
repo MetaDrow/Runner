@@ -17,7 +17,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
     [SerializeField] public float _speed { set; get; }
 
-    //////////////////////////
+    ///////////////////////////////////////////////////////////////
 
     [SerializeField] private float _jumpForce = 2f;
 
@@ -26,9 +26,9 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     internal bool _isStrafe;
 
     ///////////////////////////////////////////////////////////////
+   
     [SerializeField] internal AudioSource _audioRun;
     [SerializeField] internal AudioSource _audioCoinUp;
-
 
 
     protected void CheckPosition()
@@ -41,10 +41,6 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
             _rb.position = _targetPos; 
             _isStrafe = false;
         }
-
-
-
-
     }
 
     public void MoveForward(float _speed)
@@ -69,7 +65,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     protected void MoveInput(ref int line)
     {
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) 
+        if (Input.GetKeyDown(KeyCode.RightArrow)) 
         {
             _audioRun.enabled = false;
 
@@ -77,7 +73,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) 
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) 
         {
              _audioRun.enabled = false;
 
@@ -161,7 +157,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     public void Jump()
     {
 
-        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && _isGround)
+        if ((Input.GetKeyDown(KeyCode.UpArrow) && _isGround))
         {
             _animator.Play("RunningJump");
             _rb.velocity = Vector3.up * _jumpForce;
@@ -169,7 +165,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
             _isGround = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             _audioRun.enabled = false;
             _rb.velocity = new Vector3(0, -1, 0) * _jumpForce;
@@ -183,7 +179,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
             _animator.Play("Fall");
         }
 
-        if (_rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.LeftArrow)  || _rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
+        if (_rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
         {
             _animator.Play("Fall");
         }
