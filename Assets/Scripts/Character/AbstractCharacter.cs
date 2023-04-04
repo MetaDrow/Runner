@@ -167,6 +167,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            _isGround = false;
             _audioRun.enabled = false;
             _rb.velocity = new Vector3(0, -1, 0) * _jumpForce;
             _animator.Play("Roll");
@@ -176,11 +177,13 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
     {
         if (_rb.transform.position.y > 5) 
         {
+            _isGround = false;
             _animator.Play("Fall");
         }
 
         if (_rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.LeftArrow) || _rb.transform.position.y > 0.5f && Input.GetKeyDown(KeyCode.RightArrow)) //out of if 
         {
+            _isGround = false;
             _animator.Play("Fall");
         }
     }
