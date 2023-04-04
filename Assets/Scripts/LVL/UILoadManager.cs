@@ -63,7 +63,7 @@ internal class UILoadManager : MonoBehaviour
 
     public void Resume()
     {
-        if (CountManager.coin >= 1)
+        if (CountManager.coin >= 100)
         {
             _onPause = true;
             _DeathMenu.deathPanel.SetActive(false);
@@ -94,7 +94,7 @@ internal class UILoadManager : MonoBehaviour
         ResumeGame();
         _audio.Play();
         _character._audioRun.Play();
-        CountManager.coin -= 1;
+        CountManager.coin -= 100;
         _character._animator.SetBool("Run", true);
         _character._isPlay = true;
         _onPause = false;

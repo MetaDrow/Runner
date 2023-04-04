@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 816
   m_ShowMode: 0
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 5}
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 8096}
@@ -91,8 +91,8 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 816
-  m_MinSize: {x: 100, y: 121}
-  m_MaxSize: {x: 4000, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 20}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 8096}
   vertical: 0
-  controlID: 145
+  controlID: 130
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 121}
   m_MaxSize: {x: 4000, y: 4021}
   vertical: 0
-  controlID: 82
+  controlID: 91
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 157
+  controlID: 85
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 170
+  controlID: 103
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 158
+  controlID: 86
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: BuildPlayerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -394,16 +394,16 @@ MonoBehaviour:
     y: 0
     width: 551.2
     height: 540.8
-  m_MinSize: {x: 276, y: 121}
+  m_MinSize: {x: 641, y: 601}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 27}
+  m_ActualView: {fileID: 29}
   m_Panes:
   - {fileID: 27}
   - {fileID: 28}
   - {fileID: 29}
   - {fileID: 30}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -688,9 +688,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.5403328, y: 5.867578, z: 341.78452}
+    m_Target: {x: -0.6046442, y: -0.19925368, z: 105.903564}
     speed: 2
-    m_Value: {x: -5.370437, y: 2.933346, z: 15.845396}
+    m_Value: {x: -0.6046442, y: -0.19925368, z: 105.903564}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -737,13 +737,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.26838237, y: -0.65745664, z: 0.27164152, w: 0.64956564}
+    m_Target: {x: 0.30493242, y: -0.5852517, z: 0.25215083, w: 0.7077573}
     speed: 2
-    m_Value: {x: -0.21621415, y: -0.6896419, z: 0.2286245, w: -0.6522089}
+    m_Value: {x: 0.30493182, y: -0.58525056, z: 0.25215036, w: 0.7077559}
   m_Size:
-    m_Target: 1.1633375
+    m_Target: 3.0988667
     speed: 2
-    m_Value: 2.3779943
+    m_Value: 3.0988667
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1026,9 +1026,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1057.1334, y: 584.4988, z: 187.23836}
+    m_Target: {x: 1057.0364, y: 584.4164, z: 188.60751}
     speed: 2
-    m_Value: {x: 1.4930063, y: -3.1799996, z: 2.7632482}
+    m_Value: {x: 1057.0364, y: 584.4164, z: 188.60751}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 752.1152
     speed: 2
-    m_Value: 35.742268
+    m_Value: 752.1152
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1231,7 +1231,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2ed7fcff0802fdffb630fdff8eebfdff560dfeff3232feff0c5bfeffd05bfeffda5efeffec5efeffeaa2feff8ac7feff5c2affffc62affffaabdffff3ebeffff72e2fffff2e3ffff14fbffff
+      m_ExpandedIDs: c8e3feff8ce4feff74e7feff82e7feffe6ebfeffaaecfeff92effeffa0effeff527bffffb4ddffff14fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1311,7 +1311,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 43.80002}
     m_SelectedIDs: d2e70000
     m_LastClickedID: 59346
-    m_ExpandedIDs: 00000000de910000
+    m_ExpandedIDs: 00000000ea910000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1339,7 +1339,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de910000
+    m_ExpandedIDs: 00000000ea910000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1451,7 +1451,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 43.80002}
     m_SelectedIDs: 90bd0000
     m_LastClickedID: 48528
-    m_ExpandedIDs: 00000000de910000fe91000000ca9a3b
+    m_ExpandedIDs: 00000000ea910000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1479,7 +1479,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de910000
+    m_ExpandedIDs: 00000000ea910000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1576,22 +1576,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Level/Prefabs/Platform/Good/RampPlatform
+    - Assets/Level/Prefabs/Platform/Good
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Level/Prefabs/Platform/Good/RampPlatform
+  - Assets/Level/Prefabs/Platform/Good
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\meta\Desktop\UnityProject\Git\SnowRunner\Relise\Runner
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 151.80002}
-    m_SelectedIDs: 26920000
-    m_LastClickedID: 37414
-    m_ExpandedIDs: 00000000de910000f6910000089200000a9200000c92000000ca9a3b
+    m_SelectedIDs: 16920000
+    m_LastClickedID: 37398
+    m_ExpandedIDs: 00000000ea9100000292000016920000189200001a92000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1619,7 +1619,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de910000
+    m_ExpandedIDs: 00000000ea910000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2094,22 +2094,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Level/Prefabs/Platform/Good/RampPlatform
+    - Assets/Level/Prefabs/Platform/Good
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Level/Prefabs/Platform/Good/RampPlatform
+  - Assets/Level/Prefabs/Platform/Good
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\meta\Desktop\UnityProject\Git\SnowRunner\Relise\Runner
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 319}
-    m_SelectedIDs: 26920000
-    m_LastClickedID: 37414
-    m_ExpandedIDs: 00000000de910000f6910000fe910000089200000a9200000c92000000ca9a3b
+    m_SelectedIDs: 16920000
+    m_LastClickedID: 37398
+    m_ExpandedIDs: 00000000ea9100000292000016920000189200001a92000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2137,7 +2137,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de910000
+    m_ExpandedIDs: 00000000ea910000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
