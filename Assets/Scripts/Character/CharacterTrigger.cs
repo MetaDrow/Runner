@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,8 @@ internal class CharacterTrigger : MonoBehaviour
     [SerializeField] UILoadManager _sceneLoadManager;
     [SerializeField] AbstractCharacter _character;
 
+    private int _rightImpact;
+    private int _leftImpact;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,28 +26,43 @@ internal class CharacterTrigger : MonoBehaviour
 
         if (CompareTag("Player") && other.CompareTag("RightBoxImpact"))
         {
-            int impactCount = 0;
+
             _character._line++;
             _character.StrafeRightCalculation();
-            impactCount++;
-            if(impactCount >1)
+            _rightImpact ++;
+            if(_rightImpact >2)
             {
                 _sceneLoadManager.Trigger();
-                impactCount = 0;
+                _rightImpact = 0;
             }
+            StartCoroutine(ImpactCountReset());
         }
 
         if (CompareTag("Player") && other.CompareTag("LeftBoxImpact"))
         {
-            int impactCount = 0;
+
             _character._line--;
             _character.StrafeLeftCalculation();
-            impactCount++;
-            if (impactCount > 1)
+            _leftImpact++;
+
+
+            if (_leftImpact > 2)
             {
                 _sceneLoadManager.Trigger();
-                impactCount = 0;
+                _leftImpact = 0;
+
             }
+
+            StartCoroutine(ImpactCountReset());
+
+        }
+
+        IEnumerator ImpactCountReset()
+        {
+
+            yield return new WaitForSeconds(3f);
+            _leftImpact = 0;
+            _rightImpact= 0;
         }
     }
 }
