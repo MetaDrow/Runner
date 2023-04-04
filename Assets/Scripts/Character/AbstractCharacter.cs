@@ -167,7 +167,7 @@ abstract class AbstractCharacter : MonoBehaviour, IMove, IJump
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            _isGround = false;
+           // _isGround = false;
             _audioRun.enabled = false;
             _rb.velocity = new Vector3(0, -1, 0) * _jumpForce;
             _animator.Play("Roll");
