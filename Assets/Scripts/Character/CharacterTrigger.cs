@@ -7,8 +7,8 @@ internal class CharacterTrigger : MonoBehaviour
     [SerializeField] UILoadManager _sceneLoadManager;
     [SerializeField] AbstractCharacter _character;
 
-    private int _rightImpact;
-    private int _leftImpact;
+    private int _rightImpactCount;
+    private int _leftImpactCount;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,43 +26,40 @@ internal class CharacterTrigger : MonoBehaviour
 
         if (CompareTag("Player") && other.CompareTag("RightBoxImpact"))
         {
-
             _character._line++;
             _character.StrafeRightCalculation();
-            _rightImpact ++;
-            if(_rightImpact >2)
+            _rightImpactCount ++;
+
+            if(_rightImpactCount >2)
             {
+                CountManager.instance.SaveScore();
                 _sceneLoadManager.Trigger();
-                _rightImpact = 0;
+                _rightImpactCount = 0;
             }
             StartCoroutine(ImpactCountReset());
         }
 
         if (CompareTag("Player") && other.CompareTag("LeftBoxImpact"))
         {
-
             _character._line--;
             _character.StrafeLeftCalculation();
-            _leftImpact++;
+            _leftImpactCount++;
 
-
-            if (_leftImpact > 2)
+            if (_leftImpactCount > 2)
             {
+                CountManager.instance.SaveScore();
                 _sceneLoadManager.Trigger();
-                _leftImpact = 0;
-
+                _leftImpactCount = 0;
             }
-
             StartCoroutine(ImpactCountReset());
-
         }
 
         IEnumerator ImpactCountReset()
         {
 
             yield return new WaitForSeconds(3f);
-            _leftImpact = 0;
-            _rightImpact= 0;
+            _leftImpactCount = 0;
+            _rightImpactCount= 0;
         }
     }
 }
