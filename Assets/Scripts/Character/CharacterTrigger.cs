@@ -1,25 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.TextCore.Text;
 
 internal class CharacterTrigger : MonoBehaviour 
 {
     [SerializeField] UILoadManager _sceneLoadManager;
     [SerializeField] AbstractCharacter _character;
-    void Update()
-    {
-        RestartGame();
-    }
 
-    private void RestartGame()
-    {
-        if (Input.GetKey(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
-
+    private int _rightImpactCount;
+    private int _leftImpactCount;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,9 +16,10 @@ internal class CharacterTrigger : MonoBehaviour
         {
             CountManager.instance.SaveScore();
             _sceneLoadManager.Trigger();
+
         }
 
-        if (CompareTag("Player") && other.CompareTag("Faster") && _character._speed <= 18f)
+        if (CompareTag("Player") && other.CompareTag("Faster") && _character._speed <= 19f)
         {
             _character._speed += 0.2f;
         }
@@ -38,17 +28,38 @@ internal class CharacterTrigger : MonoBehaviour
         {
             _character._line++;
             _character.StrafeRightCalculation();
+            _rightImpactCount ++;
+
+            if(_rightImpactCount >2)
+            {
+                CountManager.instance.SaveScore();
+                _sceneLoadManager.Trigger();
+                _rightImpactCount = 0;
+            }
+            StartCoroutine(ImpactCountReset());
         }
 
         if (CompareTag("Player") && other.CompareTag("LeftBoxImpact"))
         {
             _character._line--;
             _character.StrafeLeftCalculation();
+            _leftImpactCount++;
+
+            if (_leftImpactCount > 2)
+            {
+                CountManager.instance.SaveScore();
+                _sceneLoadManager.Trigger();
+                _leftImpactCount = 0;
+            }
+            StartCoroutine(ImpactCountReset());
+        }
+
+        IEnumerator ImpactCountReset()
+        {
+
+            yield return new WaitForSeconds(3f);
+            _leftImpactCount = 0;
+            _rightImpactCount= 0;
         }
     }
-
-
-
-
-
 }
