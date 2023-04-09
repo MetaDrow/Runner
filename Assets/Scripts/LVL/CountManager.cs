@@ -21,13 +21,12 @@ public class CountManager : MonoBehaviour
     {
         instance = this;
         Reset();
+
         if (PlayerPrefs.HasKey("SaveScore"))
         {
             hightScore = PlayerPrefs.GetInt("SaveScore");
-
         }
     }
-
 
     void FixedUpdate()
     {
@@ -51,7 +50,6 @@ public class CountManager : MonoBehaviour
         if (score > hightScore)
         {
             hightScore = (int)score;
-            PlayerPrefs.SetInt("SaveScore", hightScore);
         }
     }
 

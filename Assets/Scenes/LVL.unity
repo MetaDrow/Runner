@@ -147,7 +147,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22611831}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cf535d95ecd700542b17e72de90730f0, type: 3}
@@ -6422,16 +6422,16 @@ MonoBehaviour:
   - {fileID: 416124416046598104, guid: 92a218aecfe671e4e87799b4fa7ee76e, type: 3}
   Character: {fileID: 1885825039740681610}
   BasePrefabs:
-  - {fileID: 416124416046598104, guid: 38fb52aa21ed1b8438504bf716352edc, type: 3}
-  - {fileID: 3940807530295589293, guid: 1c63959e263bad5469ac6ee53e05a96c, type: 3}
-  - {fileID: 7641788511406841936, guid: fb2ddca00e380544f85059b78e205a0f, type: 3}
-  - {fileID: 1206062418525649438, guid: 9318fd964d87bbe4fac985e90ebd0d1b, type: 3}
-  - {fileID: 8239507711380671358, guid: 84cf20a5f81b01645a99577f2a0529de, type: 3}
   - {fileID: 416124416046598104, guid: 4f15e5baa50f1684f9c55cceab00dfc3, type: 3}
   - {fileID: 3940807530295589293, guid: 2547442527639104f85909dd4db02b80, type: 3}
   - {fileID: 7641788511406841936, guid: f98763cbd34bf1745bdb71d1cdb4ed0c, type: 3}
   - {fileID: 1206062418525649438, guid: 86a6ed120db96b64ab825a5e0906f2bb, type: 3}
   - {fileID: 8239507711380671358, guid: 89d2389f747d2d742becdfa90d4c0e94, type: 3}
+  - {fileID: 416124416046598104, guid: 38fb52aa21ed1b8438504bf716352edc, type: 3}
+  - {fileID: 3940807530295589293, guid: 1c63959e263bad5469ac6ee53e05a96c, type: 3}
+  - {fileID: 7641788511406841936, guid: fb2ddca00e380544f85059b78e205a0f, type: 3}
+  - {fileID: 1206062418525649438, guid: 9318fd964d87bbe4fac985e90ebd0d1b, type: 3}
+  - {fileID: 8239507711380671358, guid: 84cf20a5f81b01645a99577f2a0529de, type: 3}
   prefabCount: 7
   playerPrefabDistance: 145
   PrefabSpawned: []

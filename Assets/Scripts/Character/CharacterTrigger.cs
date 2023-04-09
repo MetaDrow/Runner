@@ -14,7 +14,7 @@ internal class CharacterTrigger : MonoBehaviour
     {
         if (CompareTag("Player") && other.CompareTag("Finish"))
         {
-
+            PlayerPrefs.SetInt("SaveScore", CountManager.instance.hightScore);
             _sceneLoadManager.Trigger();
 
         }
@@ -32,7 +32,7 @@ internal class CharacterTrigger : MonoBehaviour
 
             if(_rightImpactCount >2)
             {
-
+                PlayerPrefs.SetInt("SaveScore", CountManager.instance.hightScore);
                 _sceneLoadManager.Trigger();
                 _rightImpactCount = 0;
             }
@@ -47,7 +47,7 @@ internal class CharacterTrigger : MonoBehaviour
 
             if (_leftImpactCount > 2)
             {
-
+                PlayerPrefs.SetInt("SaveScore", CountManager.instance.hightScore);
                 _sceneLoadManager.Trigger();
                 _leftImpactCount = 0;
             }
