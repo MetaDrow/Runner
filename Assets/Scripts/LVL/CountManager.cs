@@ -21,19 +21,11 @@ public class CountManager : MonoBehaviour
     {
         instance = this;
         Reset();
-        LoadScore();
-    }
 
-    public void SaveScore()
-    {
-        SaveSystem.SaveHightScore(this);
-    }
-
-    public void LoadScore()
-    {
-        PlayerScore playerScore = SaveSystem.LoadScore();
-
-        hightScore = playerScore.HightScore;
+        if (PlayerPrefs.HasKey("SaveScore"))
+        {
+            hightScore = PlayerPrefs.GetInt("SaveScore");
+        }
     }
 
     void FixedUpdate()
