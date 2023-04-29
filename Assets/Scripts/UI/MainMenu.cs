@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        _hightScoreText.text = CountManager.instance.hightScore.ToString();
+        _hightScoreText.text = CountManager._instance._hightScore.ToString();
     }
 
     public void Play()

@@ -14,7 +14,7 @@ public class DeathMenu : MonoBehaviour
 
     void Update()
     {
-        ScoreText.text = CountManager.instance.score.ToString();
-        CoinText.text = CountManager.coin.ToString();
+        ScoreText.text = CountManager._instance._score.ToString();
+        CoinText.text = CountManager._coin.ToString();
     }
 }

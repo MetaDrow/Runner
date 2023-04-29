@@ -6,7 +6,8 @@ public class CoinTrigger : MonoBehaviour
     {
         if (this.CompareTag("Coin") && other.CompareTag("Player"))
         {
-            CountManager.coin++;
+            EventManager._instance.Coin();
+            //CountManager.coin++;
             Destroy(this.gameObject);
         }
     }
