@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] AudioSource _audioSource;
     [SerializeField] GameObject _controlPanel;
 
+
+    [DllImport("__Internal")]
+    private static extern void ShowAdv();
     private bool _isActive;
     private void Awake()
     {
@@ -17,6 +21,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        ShowAdv();
         _controlPanel.SetActive(false);
         _isActive = false;
     }

@@ -1,10 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern void ShowAdv();
     public static EventManager _instance { get; private set; }
     public static Action onDeathTriggerEnter;
     public static Action onCoinTriggerEnter;
@@ -22,7 +25,8 @@ public class EventManager : MonoBehaviour
         if (onCoinTriggerEnter != null)
         {
             onCoinTriggerEnter();
-            Debug.Log("InstanceCoin");
+
+           // Debug.Log("InstanceCoin");
         }
     }
 
@@ -31,7 +35,8 @@ public class EventManager : MonoBehaviour
         if (onDeathTriggerEnter != null)
         {
             onDeathTriggerEnter();
-            Debug.Log("InstanceDeath");
+            ShowAdv();
+          //  Debug.Log("InstanceDeath");
         }
     }
 }
