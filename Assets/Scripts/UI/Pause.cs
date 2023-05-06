@@ -12,7 +12,7 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && UILoadManager._onPause == true)
+        if (Input.GetKeyDown(KeyCode.Escape))// && UILoadManager._onPause == true)
         {
             _pauseUI.SetActive(false);
             _uiLoadManager.ResumeGame();

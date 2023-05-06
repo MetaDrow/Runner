@@ -12,7 +12,7 @@ internal class UILoadManager : MonoBehaviour
     public Pause _pause;
     public AudioSource _audio;
     internal static bool _onPause = false;
-    public static bool _onDeath = false;
+    //public static bool _onDeath = false;//2 death 
 
     private void OnEnable()
     {
@@ -43,16 +43,17 @@ internal class UILoadManager : MonoBehaviour
     {
         if (_onPause == false)
         {
-            _character._audioRun.Pause();
+            //_character._audioRun.Pause();
+            AudioListener.pause = true;
             _onPause = true;
             PauseGame();
             _pause._pauseUI.SetActive(true);
-            _character._audioRun.enabled = false;
+            //AudioListener.pause = false;
         }
     }
     internal void DeathTrigger()
     {
-        _onDeath = true;
+        EventManager._death = true;
         _onPause = true;
         _character._isPlay = false;
         _character._animator.Play("Death");
@@ -79,7 +80,7 @@ internal class UILoadManager : MonoBehaviour
     {
         if (CountManager._coin >= 100)
         {
-            _onPause = true;
+            _onPause = false;
             _deathMenu.deathPanel.SetActive(false);
             CountManager._instance._gameUI.SetActive(true);
             StartCoroutine(ResumeGamePause());
@@ -94,7 +95,7 @@ internal class UILoadManager : MonoBehaviour
         ResumeGame();
         CountManager._instance._gameUI.SetActive(true);
         _character._isPlay = true;
-        _character._audioRun.Play();
+        AudioListener.pause = false;
     }
 
     IEnumerator ResumeGamePause()
@@ -138,10 +139,11 @@ internal class UILoadManager : MonoBehaviour
 
     void OnFocusPause()
     {
-        _onPause = true;
+        //_onPause = true;
         // _character._isPlay = false;
-        if (EventManager._death == true)
+        if (EventManager._death == true)// nen
         {
+            EventManager._death= false;
             return;
         }
         PauseGame();

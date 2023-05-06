@@ -2,17 +2,6 @@ using UnityEngine;
 
 public class FocusSoundController : MonoBehaviour
 {
-
-
-    private void OnEnable()
-    {
-        
-    }
-
-    private void OnDisable()
-    {
-        
-    }
     void OnApplicationFocus(bool hasFocus)
     {
 
@@ -28,16 +17,14 @@ public class FocusSoundController : MonoBehaviour
     private void Silence(bool silence)
     {
 
-
         AudioListener.pause = silence;
-        if(silence == true)
+
+        if(EventManager._death != true)
         {
             EventManager._instance.Pause();
         }
-        // Or / And
-        AudioListener.volume = silence ? 0 : 1;
 
-
+       // AudioListener.volume = silence ? 0 : 1;
     }
 
 }
