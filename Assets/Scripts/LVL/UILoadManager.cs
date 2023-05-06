@@ -12,15 +12,18 @@ internal class UILoadManager : MonoBehaviour
     public Pause _pause;
     public AudioSource _audio;
     internal static bool _onPause = false;
+    public static bool _onDeath = false;
 
     private void OnEnable()
     {
         EventManager.onDeathTriggerEnter += DeathTrigger;
+        EventManager.onFocus += OnFocusPause;
     }
 
     private void OnDisable()
     {
         EventManager.onDeathTriggerEnter -= DeathTrigger;
+        EventManager.onFocus -= OnFocusPause;
     }
     private void Update()
     {
@@ -49,6 +52,7 @@ internal class UILoadManager : MonoBehaviour
     }
     internal void DeathTrigger()
     {
+        _onDeath = true;
         _onPause = true;
         _character._isPlay = false;
         _character._animator.Play("Death");
@@ -130,5 +134,19 @@ internal class UILoadManager : MonoBehaviour
     void PauseGame()
     {
         Time.timeScale = 0;
+    }
+
+    void OnFocusPause()
+    {
+        _onPause = true;
+        // _character._isPlay = false;
+        if (EventManager._death == true)
+        {
+            return;
+        }
+        PauseGame();
+        _pause._pauseUI.SetActive(true);
+
+
     }
 }

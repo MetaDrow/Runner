@@ -11,6 +11,9 @@ public class EventManager : MonoBehaviour
     public static EventManager _instance { get; private set; }
     public static Action onDeathTriggerEnter;
     public static Action onCoinTriggerEnter;
+    public static Action onFocus;
+
+    public static bool _death;
     private void Awake()
     {
         if (_instance == null)
@@ -26,7 +29,7 @@ public class EventManager : MonoBehaviour
         {
             onCoinTriggerEnter();
 
-           // Debug.Log("InstanceCoin");
+            // Debug.Log("InstanceCoin");
         }
     }
 
@@ -34,9 +37,15 @@ public class EventManager : MonoBehaviour
     {
         if (onDeathTriggerEnter != null)
         {
+            _death = true;
             onDeathTriggerEnter();
-            ShowAdv();
-          //  Debug.Log("InstanceDeath");
+            //ShowAdv();
+            //  Debug.Log("InstanceDeath");
         }
+    }
+
+    public void Pause()
+    {
+        onFocus?.Invoke();
     }
 }

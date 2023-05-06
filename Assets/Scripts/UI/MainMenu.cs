@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        ShowAdv();
+        //ShowAdv();
         _controlPanel.SetActive(false);
         _isActive = false;
     }

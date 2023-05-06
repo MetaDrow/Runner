@@ -63,7 +63,7 @@ public class CountManager : MonoBehaviour
     {
         _score = 0;
     }
-    
+
     void CoinAdd()
     {
         _coin++;
@@ -71,7 +71,6 @@ public class CountManager : MonoBehaviour
 
     void ScoreCount()
     {
-
         _scoreText.text = _score.ToString();
         _hightScoreText.text = _hightScore.ToString();
     }
