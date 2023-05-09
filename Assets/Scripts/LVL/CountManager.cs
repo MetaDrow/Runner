@@ -3,63 +3,79 @@ using UnityEngine;
 
 public class CountManager : MonoBehaviour
 {
-    [SerializeField] internal static CountManager instance;
-    [SerializeField] internal TextMeshProUGUI ScoreText;
-    [SerializeField] internal TextMeshProUGUI HightScoreText;
+    [SerializeField] internal static CountManager _instance;
+    [SerializeField] internal TextMeshProUGUI _scoreText;
+    [SerializeField] internal TextMeshProUGUI _hightScoreText;
     [SerializeField] internal AbstractCharacter _character;
 
-    public float score;
-    internal int hightScore;
+    public float _score;
+    internal int _hightScore;
 
     ///////////////////////////////////////
-    [SerializeField] internal TextMeshProUGUI coinText;
-    [SerializeField] internal static int coin;
+    [SerializeField] internal TextMeshProUGUI _coinText;
+    [SerializeField] internal static int _coin;
 
     public GameObject _gameUI;
 
+
+    private void OnEnable()
+    {
+        EventManager.onCoinTriggerEnter += CoinAdd;
+    }
+    private void OnDisable()
+    {
+        EventManager.onCoinTriggerEnter -= CoinAdd;
+    }
     private void Awake()
     {
-        instance = this;
+        _instance = this;
         Reset();
 
         if (PlayerPrefs.HasKey("SaveScore"))
         {
-            hightScore = PlayerPrefs.GetInt("SaveScore");
+            _hightScore = PlayerPrefs.GetInt("SaveScore");
         }
     }
 
     void FixedUpdate()
     {
-        instance.AddScore();
-
-        ScoreText.text = score.ToString();
-        HightScoreText.text = hightScore.ToString();
-
+        AddScore();
+        ScoreCount();
         CoinCount();
     }
 
     void AddScore()
     {
-        score = (int)_character.transform.position.z;
-        score++;
+        _score = (int)_character.transform.position.z;
+        _score++;
         AddHightScore();
     }
 
     void AddHightScore()
     {
-        if (score > hightScore)
+        if (_score > _hightScore)
         {
-            hightScore = (int)score;
+            _hightScore = (int)_score;
         }
     }
 
     private void Reset()
     {
-        score = 0;
+        _score = 0;
     }
 
+    void CoinAdd()
+    {
+        _coin++;
+    }
+
+    void ScoreCount()
+    {
+        _scoreText.text = _score.ToString();
+        _hightScoreText.text = _hightScore.ToString();
+    }
     void CoinCount()
     {
-        coinText.text = coin.ToString();
+        _coinText.text = _coin.ToString();
     }
 }

@@ -9,7 +9,7 @@ public class EnviromentFactory :BaseFactory<EnviromentPrefab>
         Spawned();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Character.transform.position.z > PrefabSpawned[PrefabSpawned.Count - 1].transform.position.z - playerPrefabDistance)
         {

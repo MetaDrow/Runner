@@ -280,11 +280,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ed657e3ffb06543bdbba3425bc2673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreText: {fileID: 616807848}
-  HightScoreText: {fileID: 200959914}
+  _scoreText: {fileID: 616807848}
+  _hightScoreText: {fileID: 200959914}
   _character: {fileID: 5533770783437514740}
-  score: 0
-  coinText: {fileID: 1993734986}
+  _score: 0
+  _coinText: {fileID: 1993734986}
   _gameUI: {fileID: 222468081}
 --- !u!4 &32840275
 Transform:
@@ -3833,7 +3833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _character: {fileID: 5533770783437514740}
   _platform: {fileID: 1527598922}
-  _DeathMenu: {fileID: 1372297084}
+  _deathMenu: {fileID: 1372297084}
   _camera: {fileID: 238482935}
   _timer: {fileID: 1418652506}
   _pause: {fileID: 668127186}
@@ -7026,6 +7026,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769235696}
   m_CullTransparentMesh: 1
+--- !u!1 &1815357690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1815357692}
+  - component: {fileID: 1815357691}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1815357691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815357690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3c9f783e868fc4192cb1f4c84594a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1815357692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815357690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 243.9122, y: 24.56456, z: 569.3977}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864969734
 GameObject:
   m_ObjectHideFlags: 0

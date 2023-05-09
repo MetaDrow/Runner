@@ -9,6 +9,6 @@ public class PlayerScore
 
     public PlayerScore(CountManager countManager)
     {
-        HightScore = countManager.hightScore;
+        HightScore = countManager._hightScore;
     }
 }

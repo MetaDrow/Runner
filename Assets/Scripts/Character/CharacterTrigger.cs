@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 internal class CharacterTrigger : MonoBehaviour 
 {
-    [SerializeField] UILoadManager _sceneLoadManager;
+    [SerializeField] UILoadManager _uiManager;
     [SerializeField] AbstractCharacter _character;
 
     private int _rightImpactCount;
@@ -14,8 +15,9 @@ internal class CharacterTrigger : MonoBehaviour
     {
         if (CompareTag("Player") && other.CompareTag("Finish"))
         {
-            PlayerPrefs.SetInt("SaveScore", CountManager.instance.hightScore);
-            _sceneLoadManager.Trigger();
+            PlayerPrefs.SetInt("SaveScore", CountManager._instance._hightScore);
+            EventManager._instance.Death();
+           // _uiManager.Trigger();
 
         }
 
@@ -32,8 +34,9 @@ internal class CharacterTrigger : MonoBehaviour
 
             if(_rightImpactCount >2)
             {
-                PlayerPrefs.SetInt("SaveScore", CountManager.instance.hightScore);
-                _sceneLoadManager.Trigger();
+                PlayerPrefs.SetInt("SaveScore", CountManager._instance._hightScore);
+                // _uiManager.DeathTrigger();
+                EventManager._instance.Death();
                 _rightImpactCount = 0;
             }
             StartCoroutine(ImpactCountReset());
@@ -47,8 +50,9 @@ internal class CharacterTrigger : MonoBehaviour
 
             if (_leftImpactCount > 2)
             {
-                PlayerPrefs.SetInt("SaveScore", CountManager.instance.hightScore);
-                _sceneLoadManager.Trigger();
+                PlayerPrefs.SetInt("SaveScore", CountManager._instance._hightScore);
+                //_uiManager.DeathTrigger();
+                EventManager._instance.Death();
                 _leftImpactCount = 0;
             }
             StartCoroutine(ImpactCountReset());
